@@ -1,0 +1,54 @@
+header{
+    grid-area: header;
+}
+
+.encabezado{
+   display: grid;
+   grid-template-areas: 
+    "logo texto  redes";
+    grid-template-columns: 30% auto 30%; 
+}
+
+
+#logo{
+    grid-area: logo;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fotologo{
+ 
+    width: 55%;
+    object-fit: cover;
+
+}
+
+#texto {
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    color: rgb(21, 97, 184);
+    justify-content: space-around;
+    align-items: center;
+    h1{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 400;
+        font-size: 30px;
+        padding: 10px;
+        margin: 0px;
+    }
+    h2{
+        font-family: cursive;
+        font-weight: 400;
+        font-size: 18px;
+        font-style: italic;
+        padding: 10px;
+        margin: 0px;
+        color: black;
+    }
+}
+
+
+

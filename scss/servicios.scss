@@ -1,0 +1,18 @@
+.grillaservicios {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "form form form"
+        "footer footer footer";
+    grid-template-columns: 30% auto 30%;
+    max-width: 1200px;
+    background-color:antiquewhite;
+    justify-content: center;
+    margin: 0px;
+    gap: 1px;
+}
+
+form{
+    grid-area: form;
+}

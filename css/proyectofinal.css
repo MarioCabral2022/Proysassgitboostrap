@@ -1,0 +1,95 @@
+nav {
+  grid-area: nav;
+  background: "linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,\a  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,\a  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,\a  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,\a  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),\a  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424)";
+  background-color: #252323;
+  background-size: 20px 20px;
+  padding: 0px;
+  margin: 0px;
+  position: sticky;
+  top: 0px; }
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px; }
+  #menu li:hover {
+    background: darkgray; }
+  #menu li a {
+    padding: 10px;
+    margin: 2px;
+    color: white; }
+
+.navegacion ul, li a {
+  list-style: none;
+  text-decoration: none; }
+
+/* estilos del estado hover del dropdown
+li:hover ul a:hover {
+    background: darkgray;
+    color: #fff;
+}
+*/
+/* Estilo de .muestra-menu */
+.show-menu {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424);
+  background-color: #252323;
+  background-size: 20px 20px;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+  transition: all 0.5s ease; }
+
+/*Oculta el checkbox*/
+input[type=checkbox] {
+  display: none; }
+
+/* muestra el menu cuando el checkbox is checked*/
+input[type=checkbox]:checked ~ #menu {
+  display: block; }
+
+header {
+  grid-area: header; }
+
+.encabezado {
+  display: grid;
+  grid-template-areas: "logo texto  redes";
+  grid-template-columns: 30% auto 30%; }
+
+#logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#fotologo {
+  width: 55%;
+  object-fit: cover; }
+
+#texto {
+  grid-area: texto;
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  color: #1561b8;
+  justify-content: space-around;
+  align-items: center; }
+  #texto h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 30px;
+    padding: 10px;
+    margin: 0px; }
+  #texto h2 {
+    font-family: cursive;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+    padding: 10px;
+    margin: 0px;
+    color: black; }

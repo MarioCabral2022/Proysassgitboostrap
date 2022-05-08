@@ -1,0 +1,132 @@
+
+.grillanoticias {
+    display: grid;
+    grid-template-areas: 
+        "header header "
+        "nav nav "
+        "aside not_1"
+        "footer footer ";
+    grid-template-columns: 30% 70%;
+    max-width: 1200px;
+    background-color:antiquewhite;
+    justify-content: center;
+    margin: 0px;
+    
+}
+
+aside{
+    grid-area: aside;
+    
+}
+
+
+.menu_noticias{
+    background-color: rgba(5, 3, 29, 0.24);
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    margin: 16px;
+    position: sticky;
+    top: 90px;
+    border: 10px;
+    #titulo_aside{
+        font-size: 24px;
+        text-decoration: underline;
+        color: white;
+            #listado_noticias{
+        padding: 0px;
+            li{
+                list-style: none;
+                text-decoration: none;
+                padding: 5px;
+                a{
+                    color: black;
+                }
+
+            }
+            
+        }
+
+    }
+
+}
+
+
+/* Seccion de Notiicas */
+
+#not_1{
+        grid-area: not_1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    .card2{
+    max-width: 100%;
+    margin: 3px;
+    padding: 3px;
+    .data_foto{
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+              }
+           
+    }
+   
+}
+
+ /*INFORMACION */
+
+        
+.data {
+        display: flex;   
+        justify-content:center ;
+        .content{
+                background-color: white; 
+                color: black;
+                .author {
+                        font-size: 15px;
+                        padding: 3px;
+                        margin: 8px;
+                    
+                    }
+
+                .title {
+                    font-family: sans-serif;
+                    font-weight: 300;
+                    margin-top: 10px;
+                    font-size: 20px;
+                    margin-left: 10%;
+   
+                }
+                .text  {
+                        height: 70px;
+                        margin: 0px;
+                        color: black;
+                    }
+
+                .button{
+                    display: flex;
+                    justify-content: right;
+                    padding: 10px;
+                    margin: 10px;
+                    list-style: none;
+                    text-decoration: none;
+                    color: black;
+                }
+        }
+
+    }
+ 
+
+
+
+     
+
+
+
+
+
+
+

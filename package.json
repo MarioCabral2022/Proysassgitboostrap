@@ -1,0 +1,25 @@
+{
+  "name": "proysassgitboostrap",
+  "version": "1.0.0",
+  "description": "Proyecto Final Sass Git Boostrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "proyectofinal-css":"node-sass --include-path scss scss/proyectofinal.scss css/proyectofinal.css",
+    "watch-css": "nodemon -e scss -x \"npm run proyectofinal-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioCabral2022/Proysassgitboostrap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioCabral2022/Proysassgitboostrap/issues"
+  },
+  "homepage": "https://github.com/MarioCabral2022/Proysassgitboostrap#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
+}
