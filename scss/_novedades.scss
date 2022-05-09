@@ -34,22 +34,21 @@ aside{
     #titulo_aside{
         font-size: 24px;
         text-decoration: underline;
-        color: white;
-            #listado_noticias{
-        padding: 0px;
-            li{
-                list-style: none;
-                text-decoration: none;
-                padding: 5px;
-                a{
-                    color: black;
+        color: white;}
+
+    #listado_noticias{
+            padding: 0px;
+                li{
+                   list-style: none;
+                   text-decoration: none;
+                    padding: 5px;
+                           a{
+                              color: black;
+                             }
+
+                   }
+
                 }
-
-            }
-            
-        }
-
-    }
 
 }
 

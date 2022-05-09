@@ -1,10 +1,9 @@
-.grillasindex {
+.grillanosotros {
     display: grid;
     grid-template-areas: 
         "header header header"
         "nav nav nav"
-        "main main form"
-        "aside aside aside"
+        "form form form"
         "footer footer footer";
     grid-template-columns: 30% auto 30%;
     max-width: 1200px;

@@ -1,6 +1,11 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: antiquewhite; }
+
 nav {
   grid-area: nav;
-  background: "linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,\a  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,\a  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,\a  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,\a  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),\a  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424)";
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424);
   background-color: #252323;
   background-size: 20px 20px;
   padding: 0px;
@@ -35,7 +40,7 @@ li:hover ul a:hover {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
-  background: "linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,\a  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,\a  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,\a  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,\a  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),\a  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424)";
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424);
   background-color: #252323;
   background-size: 20px 20px;
   text-align: center;
@@ -121,7 +126,7 @@ footer {
     color: white;
     justify-content: center; }
 
-.menu3 {
+#menu3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,16 +135,16 @@ footer {
   font-size: 10px;
   padding: 5px;
   margin: 5px; }
-  .menu3 ul {
+  #menu3 ul {
     padding: 5px;
     margin: 5px; }
-    .menu3 ul li {
+    #menu3 ul li {
       list-style: none;
       padding: 5px;
       margin: 1px; }
-      .menu3 ul li:hover {
+      #menu3 ul li:hover {
         background: darkgray; }
-      .menu3 ul li a {
+      #menu3 ul li a {
         color: white;
         text-decoration: none; }
 
@@ -159,7 +164,7 @@ li:hover ul a:hover {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
-  background: "linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,\a  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,\a  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,\a  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,\a  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),\a  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424)";
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424);
   background-color: #252323;
   background-size: 20px 20px;
   text-align: center;
@@ -174,6 +179,16 @@ input[type=checkbox] {
 /* muestra el menu cuando el checkbox is checked*/
 input[type=checkbox]:checked ~ #menu_footer {
   display: block; }
+
+.grillasindex {
+  display: grid;
+  grid-template-areas: "header header header" "nav nav nav" "main main form" "aside aside aside" "footer footer footer";
+  grid-template-columns: 30% auto 30%;
+  max-width: 1200px;
+  background-color: antiquewhite;
+  justify-content: center;
+  margin: 0px;
+  gap: 1px; }
 
 .grillanoticias {
   display: grid;
@@ -202,14 +217,14 @@ aside {
     font-size: 24px;
     text-decoration: underline;
     color: white; }
-    .menu_noticias #titulo_aside #listado_noticias {
-      padding: 0px; }
-      .menu_noticias #titulo_aside #listado_noticias li {
-        list-style: none;
-        text-decoration: none;
-        padding: 5px; }
-        .menu_noticias #titulo_aside #listado_noticias li a {
-          color: black; }
+  .menu_noticias #listado_noticias {
+    padding: 0px; }
+    .menu_noticias #listado_noticias li {
+      list-style: none;
+      text-decoration: none;
+      padding: 5px; }
+      .menu_noticias #listado_noticias li a {
+        color: black; }
 
 /* Seccion de Noticias */
 #not_1 {
@@ -255,6 +270,16 @@ aside {
       list-style: none;
       text-decoration: none;
       color: black; }
+
+.grillanosotros {
+  display: grid;
+  grid-template-areas: "header header header" "nav nav nav" "form form form" "footer footer footer";
+  grid-template-columns: 30% auto 30%;
+  max-width: 1200px;
+  background-color: antiquewhite;
+  justify-content: center;
+  margin: 0px;
+  gap: 1px; }
 
 .grilla_noticias_1 {
   display: grid;
