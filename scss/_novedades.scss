@@ -54,7 +54,7 @@ aside{
 }
 
 
-/* Seccion de Notiicas */
+/* Seccion de Noticias */
 
 #not_1{
         grid-area: not_1;
@@ -80,8 +80,8 @@ aside{
 
         
 .data {
-        display: flex;   
-        justify-content:center ;
+        
+        width: 90%;
         .content{
                 background-color: white; 
                 color: black;

@@ -1,0 +1,152 @@
+@media screen and (max-width : 760px){
+
+    /*Hace que el dropdown links aparescan en linea */
+    #menu {
+        
+        position: static;
+        display: none;
+        
+        font-size: 16px;
+        padding: 5px;
+        margin-left: 50px;
+       
+        ul{
+           li{
+             margin-bottom: 3px;
+             width: 90%; 
+              
+             }
+        }
+    }
+            
+    /*Display '.muestra-menu' link */
+    
+    .show-menu {
+        display:block;
+    }
+
+    #texto{
+        h1{
+            font-weight: 200;
+            font-size: 22px;
+            padding: 10px;
+
+        }
+        h2{
+            font-weight: 200;
+            font-size: 18px;
+            padding: 15px;
+        
+        }
+    } 
+
+    #fotologo{
+        width: 80%;
+        object-fit: contain;
+    }
+
+}
+
+@media screen and (max-width: 760px){
+    footer{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;         
+        
+        #nosotros{
+            display: flex;
+            flex-direction: column;
+   
+            #informacion{
+                justify-content: space-around;
+                         }
+            #boton {
+                left: 20%;
+            }
+                }  
+                              
+        #mapa{
+            justify-content: center;
+            padding: 15px;
+            border: 5px;
+            margin: 10px;
+            width: 80%;
+             }
+
+    }
+
+      /* Display '.muestra-menu' link*/
+
+   
+    #menu_footer {
+                        position: static;
+                        display: none;
+                        font-size: 15px;
+                        padding: 5px;
+                        margin-left: 30px;
+                    
+                        ul{
+                            li{
+                                margin-bottom: 3px;
+                                width: 90%; 
+                               
+                                }
+                            }
+                }
+
+        
+    
+
+    .show-menu1 {
+          display:block;
+          font-size: 16px;
+          padding: 6px 0 6px 0;
+          margin: 15px 38px 15px 0;
+        
+    }
+
+    
+           
+   
+        }
+
+
+    @media only screen and (max-width: 420px){
+   
+        .cuerpo_noticias{
+            margin: 2px;
+            padding: 2px;
+        
+        
+        .informe_texto{
+            padding: 3px;
+            font-size: 8px;    
+            font-weight: 100;
+     
+        }
+        
+        #detalle_liq{
+       
+            padding: 15px;
+    
+    }
+    }
+    }
+    @media only screen and (min-width: 421px) and (max-width: 760px){
+   
+        .cuerpo_noticias{
+            margin: 5px;
+            padding: 5px;
+
+            .informe_texto{
+                        padding: 15px;
+                        font-size: 18px;    
+                        font-weight: 100;
+                     }
+        }
+      
+    #detalle_liq{
+        padding: 15px;
+   
+    }
+    }  

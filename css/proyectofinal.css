@@ -26,18 +26,16 @@ nav {
   list-style: none;
   text-decoration: none; }
 
-/* estilos del estado hover del dropdown
 li:hover ul a:hover {
-    background: darkgray;
-    color: #fff;
-}
-*/
+  background: darkgray;
+  color: #fff; }
+
 /* Estilo de .muestra-menu */
 .show-menu {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424);
+  background: "linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,\a  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,\a  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,\a  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,\a  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),\a  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424)";
   background-color: #252323;
   background-size: 20px 20px;
   text-align: center;
@@ -45,7 +43,7 @@ li:hover ul a:hover {
   display: none;
   transition: all 0.5s ease; }
 
-/*Oculta el checkbox*/
+/*Oculta el checkbox */
 input[type=checkbox] {
   display: none; }
 
@@ -93,3 +91,291 @@ header {
     padding: 10px;
     margin: 0px;
     color: black; }
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.788); }
+
+#nosotros {
+  color: white;
+  padding: 5px;
+  margin: 5px; }
+
+#informacion {
+  padding: 5px;
+  margin: 15px; }
+
+#boton {
+  position: relative;
+  left: 30%;
+  background-color: grey;
+  border-radius: 50%;
+  margin: 35px;
+  padding: 20px; }
+  #boton a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    justify-content: center; }
+
+.menu3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  padding: 5px;
+  margin: 5px; }
+  .menu3 ul {
+    padding: 5px;
+    margin: 5px; }
+    .menu3 ul li {
+      list-style: none;
+      padding: 5px;
+      margin: 1px; }
+      .menu3 ul li:hover {
+        background: darkgray; }
+      .menu3 ul li a {
+        color: white;
+        text-decoration: none; }
+
+li:hover ul a:hover {
+  background: darkgray;
+  color: #fff; }
+
+#mapa {
+  justify-content: center;
+  padding: 15px;
+  border: 5px;
+  margin: 10px;
+  width: 95%; }
+
+/* Estilo de .muestra-menu */
+.show-menu1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background: "linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,\a  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,\a  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,\a  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,\a  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),\a  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424)";
+  background-color: #252323;
+  background-size: 20px 20px;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+  transition: all 0.5s ease; }
+
+/*Oculta el checkbox*/
+input[type=checkbox] {
+  display: none; }
+
+/* muestra el menu cuando el checkbox is checked*/
+input[type=checkbox]:checked ~ #menu_footer {
+  display: block; }
+
+.grillanoticias {
+  display: grid;
+  grid-template-areas: "header header " "nav nav " "aside not_1" "footer footer ";
+  grid-template-columns: 30% 70%;
+  max-width: 1200px;
+  background-color: antiquewhite;
+  justify-content: center;
+  margin: 0px; }
+
+aside {
+  grid-area: aside; }
+
+.menu_noticias {
+  background-color: rgba(5, 3, 29, 0.24);
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  margin: 16px;
+  position: sticky;
+  top: 90px;
+  border: 10px; }
+  .menu_noticias #titulo_aside {
+    font-size: 24px;
+    text-decoration: underline;
+    color: white; }
+    .menu_noticias #titulo_aside #listado_noticias {
+      padding: 0px; }
+      .menu_noticias #titulo_aside #listado_noticias li {
+        list-style: none;
+        text-decoration: none;
+        padding: 5px; }
+        .menu_noticias #titulo_aside #listado_noticias li a {
+          color: black; }
+
+/* Seccion de Noticias */
+#not_1 {
+  grid-area: not_1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center; }
+  #not_1 .card2 {
+    max-width: 100%;
+    margin: 3px;
+    padding: 3px; }
+    #not_1 .card2 .data_foto {
+      display: flex;
+      justify-content: center;
+      padding: 10px; }
+
+/*INFORMACION */
+.data {
+  width: 90%; }
+  .data .content {
+    background-color: white;
+    color: black; }
+    .data .content .author {
+      font-size: 15px;
+      padding: 3px;
+      margin: 8px; }
+    .data .content .title {
+      font-family: sans-serif;
+      font-weight: 300;
+      margin-top: 10px;
+      font-size: 20px;
+      margin-left: 10%; }
+    .data .content .text {
+      height: 70px;
+      margin: 0px;
+      color: black; }
+    .data .content .button {
+      display: flex;
+      justify-content: right;
+      padding: 10px;
+      margin: 10px;
+      list-style: none;
+      text-decoration: none;
+      color: black; }
+
+.grilla_noticias_1 {
+  display: grid;
+  grid-template-areas: "header header " "nav nav " "informe informe" "footer footer ";
+  grid-template-columns: 30% 70%;
+  max-width: 1200px;
+  background-color: antiquewhite;
+  justify-content: center;
+  margin: 0px; }
+
+.cuerpo_noticias {
+  grid-area: informe;
+  box-sizing: content-box;
+  margin: 15px;
+  padding: 15px; }
+  .cuerpo_noticias .informe_texto {
+    padding: 80px;
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify; }
+
+#detalle_liq {
+  display: flex;
+  flex-direction: column;
+  padding: 15px; }
+  #detalle_liq p {
+    margin: 1px; }
+
+.grillaservicios {
+  display: grid;
+  grid-template-areas: "header header header" "nav nav nav" "form form form" "footer footer footer";
+  grid-template-columns: 30% auto 30%;
+  max-width: 1200px;
+  background-color: antiquewhite;
+  justify-content: center;
+  margin: 0px;
+  gap: 1px; }
+
+form {
+  grid-area: form; }
+
+@media screen and (max-width: 760px) {
+  /*Hace que el dropdown links aparescan en linea */
+  #menu {
+    position: static;
+    display: none;
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 50px; }
+    #menu ul li {
+      margin-bottom: 3px;
+      width: 90%; }
+  /*Display '.muestra-menu' link */
+  .show-menu {
+    display: block; }
+  #texto h1 {
+    font-weight: 200;
+    font-size: 22px;
+    padding: 10px; }
+  #texto h2 {
+    font-weight: 200;
+    font-size: 18px;
+    padding: 15px; }
+  #fotologo {
+    width: 80%;
+    object-fit: contain; } }
+
+@media screen and (max-width: 760px) {
+  footer {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    footer #nosotros {
+      display: flex;
+      flex-direction: column; }
+      footer #nosotros #informacion {
+        justify-content: space-around; }
+      footer #nosotros #boton {
+        left: 20%; }
+    footer #mapa {
+      justify-content: center;
+      padding: 15px;
+      border: 5px;
+      margin: 10px;
+      width: 80%; }
+  /* Display '.muestra-menu' link*/
+  #menu_footer {
+    position: static;
+    display: none;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 30px; }
+    #menu_footer ul li {
+      margin-bottom: 3px;
+      width: 90%; }
+  .show-menu1 {
+    display: block;
+    font-size: 16px;
+    padding: 6px 0 6px 0;
+    margin: 15px 38px 15px 0; } }
+
+@media only screen and (max-width: 420px) {
+  .cuerpo_noticias {
+    margin: 2px;
+    padding: 2px; }
+    .cuerpo_noticias .informe_texto {
+      padding: 3px;
+      font-size: 8px;
+      font-weight: 100; }
+    .cuerpo_noticias #detalle_liq {
+      padding: 15px; } }
+
+@media only screen and (min-width: 421px) and (max-width: 760px) {
+  .cuerpo_noticias {
+    margin: 5px;
+    padding: 5px; }
+    .cuerpo_noticias .informe_texto {
+      padding: 15px;
+      font-size: 18px;
+      font-weight: 100; }
+  #detalle_liq {
+    padding: 15px; } }
