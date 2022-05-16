@@ -3,48 +3,40 @@ nav{
     background: $background_nav;
     background-color: #252323;
     background-size: 20px 20px;
-    padding: 0px;
-    margin: 0px;
-    position: sticky;
-    top: 0px;
+    padding: 3px;
+    margin: 6px;
+    position: static;
+    top: 15px;
+    max-width: 320px;
+    left: 25%;
+    
        
 }
-
 #menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    li{
-        &:hover{
-            background: darkgray;
-        }
+    position: static;
+    display: none;
+    font-size: 16px;
+    padding: 15px;
+    margin-left: 30px;
+    margin-top: 6px;
+        li{
+            margin-bottom: 5px;
 
-        a{
-            padding: 10px;
-            margin: 2px; 
-            color: white;
+            a{
+                padding: 10px;
+                margin: 2px; 
+                color: white;
+             }
 
-        }
-        }
-        
+            }
     }
-
+            
 
 .navegacion ul, li a {
     list-style: none;
     text-decoration: none;
 }
 
-li:hover ul a:hover {
-    background: darkgray;
-    color: #fff;
-}
-
-
-/* Estilo de .muestra-menu */
 
 .show-menu {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -55,17 +47,19 @@ li:hover ul a:hover {
     background-size: 20px 20px;
     text-align: center;
     padding: 10px 0;
-    display: none;
+    display: block;
     transition:all 0.5s ease;
+    margin-top: 6px;
+   
 }
 
-
-/*Oculta el checkbox */
 input[type=checkbox]{
     display: none;
 }
 
-/* muestra el menu cuando el checkbox is checked*/
+
 input[type=checkbox]:checked ~ #menu{
     display: block;
 }
+
+

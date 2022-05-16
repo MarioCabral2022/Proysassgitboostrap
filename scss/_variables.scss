@@ -1,7 +1,48 @@
 $background_nav: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424);
+$background_footer: url(../imagenes/10.jpg);
+
+
+@mixin autor {
+        font-size: 15px;
+        padding: 3px;
+        margin: 8px;
+        justify-items: left;
+
+}
+
+@mixin titulo {
+        font-family: sans-serif;
+        font-weight: 300;
+        margin-top: 10px;
+        font-size: 20px;
+        
+}
+
+@mixin texto_noticia {
+    height: 70px;
+    margin: 0px;
+    color: black;
+    
+}
+
+@mixin boton_leer_mas {
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+    margin: 10px;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+    
 
 body{
     display: flex;
     justify-content: center;
-    background-color: antiquewhite;
+    margin: 0;
+    
 }
+
+
+
+

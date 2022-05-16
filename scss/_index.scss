@@ -1,15 +1,116 @@
 .grillasindex {
-    display: grid;
-    grid-template-areas: 
-        "header header header"
-        "nav nav nav"
-        "main main form"
-        "aside aside aside"
-        "footer footer footer";
-    grid-template-columns: 30% auto 30%;
-    max-width: 1200px;
-    background-color:antiquewhite;
-    justify-content: center;
-    margin: 0px;
-    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../imagenes/plain-backdrop-decorative-gray-textured.jpg);
+
 }
+
+main{
+    max-width: 320px;
+    padding: 1px;
+    margin: 3px;
+    box-sizing: border-box;
+       .frases {
+                overflow: hidden;
+                align-items: center;
+                ul{
+                    display: flex;
+                    padding: 5%;
+                    width: 405%;
+                    animation: slide 80s infinite alternate ease-in-out;
+                    li{
+                        list-style: none;
+                        margin: 18px;
+                        img{
+                            object-fit: contain;
+                            width: 100%;
+                        }
+                       
+                    }      
+                }
+            }              
+}
+
+
+@keyframes slide {
+    0%  { margin-left: 0%;}
+    20% { margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    40% {margin-left: -100%;}
+
+    45% {margin-left: -200%;}
+    60% {margin-left: -200%;}
+
+    65% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+   
+    }
+
+    .conteiner{
+        margin: auto;
+       
+        max-width: 320px;
+        width: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+        ul{
+             list-style: none;
+             margin: 0;
+             padding: 0;
+             position: relative;
+             max-width: 320px;
+             width: 100%;
+             height: 120px;
+             overflow: hidden;
+            li{
+                position: absolute;
+                opacity: 0 ;
+                max-width: inherit;
+                height: inherit;
+                background-color: white;
+                transition: opacity 0.5s;
+                &:first-child{
+                    opacity: 1;
+                }
+                &:target{
+                    opacity: 1;
+                }
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+    }
+ 
+ 
+    .menu{
+        text-align: center;
+        margin: 20px;
+        padding: 10px;
+        li{
+            display: inline-block;
+            text-align: center;
+            a{
+                display: inline-block;
+                color: white;
+                text-decoration: none;
+                background-color: grey;
+                padding: 10px;
+                width: 80px;
+                height: 15px;
+                font-size: 15px;
+                border-radius: 50%;
+                &:hover{
+                    background-color: beige;
+                    color: red;
+                }
+            }
+        }
+    }
+    
+ 
+    
+    

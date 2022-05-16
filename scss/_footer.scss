@@ -1,30 +1,29 @@
 footer{
     grid-area: footer;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    background-color:rgba(0, 0, 0, 0.788) ;
+    justify-content: space-between;
+    background-image: $background_footer;
+    max-width: 320px;
 } 
 
-
 #nosotros{
-    color: white;
+    color: black;
+    max-width: 350px;
     padding: 5px;
     margin: 5px;
-   }
-
-#informacion{
-    padding: 5px;
-    margin: 15px;
-
+       #informacion{
+        padding: 5px;
+    
+         }
 }
 
 #boton{
     position: relative;
     left: 30%;
-    background-color: grey;
+    background-color: darkgrey;
     border-radius: 50%;
-    margin: 35px;
     padding: 20px;
         a{
             list-style: none;
@@ -35,17 +34,20 @@ footer{
 }
 
 
-
-
 #menu3{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10px;
+    font-size: 15px;
     padding: 5px;
-    margin: 5px;
+    margin: 15px;
+
+    h5{
+        margin: 2px;
+        font-size: 16px;
+    }
 
     ul{
         padding: 5px;
@@ -56,54 +58,55 @@ footer{
             margin: 1px;
             &:hover{
                     background: darkgray;
+                    
                    }
             a{
-                color: white;
+                color: black;
                 text-decoration: none;
+                &:hover{
+                    color: white;
+                }
             }
         }
     }
 }
 
-li:hover ul a:hover {
-    background: darkgray;
-    color: #fff;
-}
+.redes_sociales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    margin: 15px;
+    h5{
+        margin: 2px;
+        font-size: 16px;
+
+    }
+    a{
+        text-decoration: none;
+        list-style: none;
+        color: black;
+        padding: 4px;
+        i{
+            padding: 0px;
+            margin: 4px;
+            font-size: 18px;
+        }
+       } 
+
+    }
 
 
    
 #mapa{
     justify-content: center;
-    padding: 15px;
+    padding: 10px;
     border: 5px;
     margin: 10px;
-    width: 95%;
+    width: 90%;
     
 }
 
-
-/* Estilo de .muestra-menu */
-
-.show-menu1 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-decoration: none;
-    color: #fff;
-    background: $background_nav;
-    background-color: #252323;
-    background-size: 20px 20px;
-    text-align: center;
-    padding: 10px 0;
-    display: none;
-    transition:all 0.5s ease;
-}
-
-
-/*Oculta el checkbox*/
-input[type=checkbox]{
-    display: none;
-}
-
-/* muestra el menu cuando el checkbox is checked*/
-input[type=checkbox]:checked ~ #menu_footer{
-    display: block;
-}

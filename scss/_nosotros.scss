@@ -1,14 +1,74 @@
 .grillanosotros {
-    display: grid;
-    grid-template-areas: 
-        "header header header"
-        "nav nav nav"
-        "form form form"
-        "footer footer footer";
-    grid-template-columns: 30% auto 30%;
-    max-width: 1200px;
-    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
     justify-content: center;
     margin: 0px;
-    gap: 1px;
+    gap: 1px; 
+    background-image: url(../imagenes/894.svg);
 }
+
+
+
+.miviva{
+    margin-bottom: 10px;
+    section{
+          .mensaje{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                h2{
+                    font-size: 25px;
+                    font-weight: 300;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-style: italic;
+                }
+                p{
+                    font-size: 15px;
+                    font-weight: 200;
+                    font-style: italic;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+
+          }
+      }
+
+    }
+
+
+.cv_nosotros{
+   
+    display: flex;
+    flex-direction: column;
+
+    .ana{
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+            img{
+                min-width: 50%;
+            }
+    }
+
+    .mario{
+        @extend .ana
+        
+    }
+
+    .cv{
+        display: flex;
+        flex-direction: column;
+       
+            h3{
+                font-size: 16px;
+                font-weight: 200;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+            p{
+                font-size: 10px;
+            }
+            }
+
+        
+}
+

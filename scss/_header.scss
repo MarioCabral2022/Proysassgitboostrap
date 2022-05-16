@@ -1,54 +1,74 @@
 header{
     grid-area: header;
+    max-width: 320px;
 }
 
 .encabezado{
-   display: grid;
-   grid-template-areas: 
-    "logo texto  redes";
-    grid-template-columns: 30% auto 30%; 
-}
-
-
-#logo{
-    grid-area: logo;
-     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#fotologo{
- 
-    width: 55%;
-    object-fit: cover;
-
-}
-
-#texto {
-    grid-area: texto;
-    display: flex;
-    flex-direction: column;
-    padding: 2px;
-    color: rgb(21, 97, 184);
-    justify-content: space-around;
-    align-items: center;
-    h1{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-weight: 400;
-        font-size: 30px;
-        padding: 10px;
-        margin: 0px;
+   display: flex;
+   flex-direction: column;
+   background-image: url(../imagenes/10.jpg);
+   
+   
+      #logo{
+            grid-area: logo;
+            display: flex;
+            justify-content: center;
+            
+                #fotologo{
+                            width: 55%;
+                            object-fit: cover;
+                         }
+            }
+    #texto {
+        grid-area: texto;
+        display: flex;
+        flex-direction: column;
+        padding: 2px;
+        color: rgb(21, 97, 184);
+        justify-content: space-around;
+        align-items: center;
+        h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 200;
+            font-size: 22px;
+            padding: 10px;
+            margin: 0px;
+        }
+        h2{
+            font-family: cursive;
+            font-weight: 200;
+            font-size: 18px;
+            font-style: italic;
+            padding: 10px;
+            margin: 0px;
+            color: black;
+        }
     }
-    h2{
-        font-family: cursive;
-        font-weight: 400;
-        font-size: 18px;
-        font-style: italic;
-        padding: 10px;
-        margin: 0px;
-        color: black;
-    }
+
 }
+
+
+.redes_sociales_header {
+        grid-area: redes;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+                a{
+            padding: 20px;
+            color: black;
+            i{
+                width: 25px;
+                height: 25px;
+            }
+
+        }
+
+}
+
+
+
+
 
 
 
