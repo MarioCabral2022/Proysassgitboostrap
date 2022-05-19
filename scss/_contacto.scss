@@ -1,14 +1,12 @@
 .grillacontacto {
     display: grid;
     grid-template-areas: 
-        "header header header"
-        "nav nav nav"
-        "form form form"
-        "footer footer footer";
-    grid-template-columns: 30% auto 30%;
-    max-width: 320px;
+        "header"
+        "nav"
+        "form"
+        "footer";
     background-color:antiquewhite;
-    justify-content: center;
+    max-width: 320px;
     margin: 0px;
     gap: 1px;
 }
@@ -18,15 +16,16 @@
     background-image: url(../imagenes/year-6786741_1920.jpg);
     background-size: cover;
     width: 100%;
+        
 }
+
 
 .formulario_contacto{
     display: flex;
-    flex-direction: row;
-        #formulario{
+    flex-direction: column;
+        #formulario_cuerpo{
             background-color: white;
             padding: 5px;
-            margin-left: 15%;
             margin-bottom: 50px;
             margin-top: 20px;
             box-sizing: border-box;
@@ -34,15 +33,14 @@
                                 text-align: center;
                                 font-size: 20px;
                                 color: aqua;
-                        }
-
-       }
-
-}
-
+                }
+        }
+    }
 
 .datos{
    border-bottom: 2px solid rgb(128, 8, 8);
+   margin: 0;
+   padding: 0;
 }
 
 
@@ -82,9 +80,9 @@
 }
 
 #mensaje{
-    width: 400px;
+    width: 300px;
     height: 300px;
-    margin: 10px;
+    margin: 1px;
 }
 
 #titulo_contacto{

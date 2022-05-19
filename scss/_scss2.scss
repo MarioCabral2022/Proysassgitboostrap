@@ -1,0 +1,136 @@
+
+
+@media screen and (min-width:426px) and (max-width: 769px){
+    /* Footer */
+    
+    footer{
+     
+        #nosotros{
+            display: flex;
+            flex-direction: column;
+   
+            #informacion{
+                justify-content: space-around;
+                         }
+            #boton {
+                left: 20%;
+            }
+                }  
+                              
+        #mapa{
+            justify-content: center;
+            padding: 15px;
+            border: 5px;
+            margin: 10px;
+            width: 80%;
+             }
+
+    }
+
+    /* Header */ 
+
+    .encabezado{
+        display: grid;
+        grid-template-areas: 
+         "logo texto redes";
+         grid-template-columns: 30% auto 30%; 
+         #logo{
+            #fotologo{
+                width: 110%;
+                object-fit: contain;
+            }
+            
+         }
+    }
+    
+    nav{
+        max-width: 100%;
+
+    }
+
+    #menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            margin: 5px;
+
+
+           
+            input[type=checkbox]{
+                display: none;
+            }
+
+    }
+
+    .show-menu {
+        display:none;
+    }
+
+    /* Noticias */
+    .cuerpo_noticias{
+                margin: 5px;
+                padding: 5px;
+
+                .informe_texto{
+                            padding: 15px;
+                            font-size: 18px;    
+                            font-weight: 100;
+                        }
+            }
+        
+    #detalle_liq{
+            padding: 15px;
+    
+        }
+    /* formularios */
+
+   
+    .formulario_contacto{
+            flex-direction: row;
+            align-items: center;
+                #formulario{
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    margin-bottom: 30px;            
+                    max-width: 60%; 
+                    
+            }
+        
+    }
+    
+    #mensaje{
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+    }
+        
+    #titulo_contacto{
+            font-size: 18px;
+            font-weight: 300;
+            color:black;    
+
+    }
+        #contactos{
+            padding: 30px;
+            margin-right: 15%;
+            margin-bottom: 50px;
+            margin-top: 20px;
+            margin-left: 10%;
+            box-sizing: border-box;
+                p {
+                    font-size: 16px;
+                    font-weight: 200;
+                    color:black;
+                }
+    }  
+
+    /*Nosotros */
+    .grillanosotros {
+        max-width: 768px;
+        
+    }
+
+}

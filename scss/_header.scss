@@ -2,7 +2,6 @@ header{
     grid-area: header;
     max-width: 320px;
 }
-
 .encabezado{
    display: flex;
    flex-direction: column;
@@ -10,17 +9,14 @@ header{
    
    
       #logo{
-            grid-area: logo;
             display: flex;
             justify-content: center;
-            
                 #fotologo{
                             width: 55%;
                             object-fit: cover;
                          }
             }
     #texto {
-        grid-area: texto;
         display: flex;
         flex-direction: column;
         padding: 2px;

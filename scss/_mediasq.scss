@@ -1,16 +1,93 @@
+@media screen and (min-width: 375px){
+    header{
+        max-width: 375px;
+    }
+  
+    nav{
+        
+        max-width: 375px;
+    }
 
-@media only screen and (max-width: 425px){
+    aside{
+        max-width: 375px;
+            
+    }    
+
+    .grillanosotros {
+        max-width: 375px;
+    }
+
+    .grillanoticias {
+        max-width: 375px;
+    }
+
+    #mensaje{
+        width: 355px;
+    }
+    .grillacontacto{
+        max-width: 375px;
+    }
+
+    footer{
+        max-width: 375px;
+    }
+
+
+    .menu_noticias{
+        display: none;
+    
+    }
+
+    .grillasindex {
+     
+        max-width: 375px;
+    }
+    
+    .principal{
+        max-width: 375px;
+       
+    }
+
+}
+
+
+
+@media screen and (min-width: 425px){
   
     header{
         max-width: 425px;
     }
   
-  
-  
-  
-  
-  
-  
+    nav{
+        
+        max-width: 425px;
+    }
+
+    aside{
+        max-width: 425px;
+            
+    }    
+
+    .grillanosotros {
+       
+        max-width: 425px;
+    }
+
+    .grillanoticias {
+        max-width: 425px;
+    }
+
+    .grillacontacto{
+        max-width: 425px;
+    }
+
+    .grillasindex{
+        max-width: 425px;
+    }
+
+    .principal{
+        max-width: 425px;
+    }   
     /* Noticias */
     .cuerpo_noticias{
             margin: 2px;
@@ -25,28 +102,15 @@
         }
         
         #detalle_liq{
-       
             padding: 15px;
-    
-        }
+            }
     }
 
     /* formulario */
-        .formulario_contacto{
-            flex-direction: column;
-                #formulario{
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    margin-bottom: 30px;            
-                        
-            }
-        
-        }
-    
+            
         #mensaje{
-            width: 250px;
-            height: 150px;
-            margin: 10px;
+            width: 400px;
+           
         }
         
         #titulo_contacto{
@@ -72,287 +136,119 @@
         
         display: inline-block;
         max-width: 425px;
+    }
+} 
+    
+@media screen and (min-width: 425px){
 
-    aside{
-            max-width: 425px;
-            
-        }    
-
+    /* Nosotros */
    
-    }
-    .grillanoticias {
-                
-        max-width: 425px;
-        
-    }
-
     #not_1{
-        .card2{
-            max-width: 425px;
+       max-width: 425px;
+        .card2 {
+           
             .data_foto{
                 max-width: 425px;
-                max-height: 180px;
-                
-               img{
-                    object-fit: contain;
-                    max-width: 100%;
-                    max-height: 100%;
+                max-height: 300px;
+              
                }
-
-            }
-                
-                
-    }
-    .data {
-           
-          max-width: 425px;
-         
-            .content{
-                  
-                                           
-                    .author {
-                            @include autor
-                        
-                        }
-
-                    .title {
-                            @include titulo
-    
-                    }
-                    .text  {
-                        @include texto_noticia
-                        }
-
-                    .button{
-                        @include boton_leer_mas
-                        }
+            .data{
+                max-width: 425px;
             }
 
+            }
+       
         }
 
 }
-   
+ 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-@media only screen and (min-width: 425px){
-
-    /*Nosotros */
-    .grillanosotros {
-        max-width: 425px;
-        
-    }
     
-        
-}
+@media screen and (min-width: 768px) {
 
-
-
-@media screen and (min-width:426px) and (max-width: 769px){
-    /* Footer */
-    
-    footer{
-     
-        #nosotros{
-            display: flex;
-            flex-direction: column;
-   
-            #informacion{
-                justify-content: space-around;
-                         }
-            #boton {
-                left: 20%;
-            }
-                }  
-                              
-        #mapa{
-            justify-content: center;
-            padding: 15px;
-            border: 5px;
-            margin: 10px;
-            width: 80%;
-             }
-
+    .grillacontacto{
+        max-width: 768px;
     }
-
-    /* Header */ 
-
-    .encabezado{
-        display: grid;
-        grid-template-areas: 
-         "logo texto redes";
-         grid-template-columns: 30% auto 30%; 
-         #logo{
-            #fotologo{
-                width: 110%;
-                object-fit: contain;
-            }
-            
-         }
-    }
-    
-    nav{
-        max-width: 100%;
-
-    }
-
-    #menu {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 18px;
-            margin: 5px;
-
-
-           
-            input[type=checkbox]{
-                display: none;
-            }
-
-    }
-
-    .show-menu {
-        display:none;
-    }
-
-    /* Noticias */
-    .cuerpo_noticias{
-                margin: 5px;
-                padding: 5px;
-
-                .informe_texto{
-                            padding: 15px;
-                            font-size: 18px;    
-                            font-weight: 100;
-                        }
-            }
-        
-    #detalle_liq{
-            padding: 15px;
-    
-        }
-    /* formularios */
-
-   
-    .formulario_contacto{
-            flex-direction: row;
-            align-items: center;
-                #formulario{
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    margin-bottom: 30px;            
-                    max-width: 60%; 
-                    
-            }
-        
-    }
-    
-    #mensaje{
-            width: 300px;
-            height: 200px;
-            margin: 10px;
-    }
-        
-    #titulo_contacto{
-            font-size: 18px;
-            font-weight: 300;
-            color:black;    
-
-    }
-        #contactos{
-            padding: 30px;
-            margin-right: 15%;
-            margin-bottom: 50px;
-            margin-top: 20px;
-            margin-left: 10%;
-            box-sizing: border-box;
-                p {
-                    font-size: 16px;
-                    font-weight: 200;
-                    color:black;
-                }
-    }  
-
-    /*Nosotros */
     .grillanosotros {
         max-width: 768px;
-        
     }
 
-}
+   
+    .grillaservicios{
+        max-width: 768px;
+    }
 
-    
-@media only screen and (min-width: 769px) {
+    footer{
+        max-width: max-content;
+        display: flex;
+        flex-direction: row;
+        #nosotros{
+            width: 300px;
+            #boton{
+                top: 10px;
+                  }
 
+        }          
+        .enlaces_redes{
+            #menu3{
+                margin: 5px;
+            }
+            .redes_sociales{
+                margin: 5px;
+                h5{
+                    font-size: 12px;
+                }
+            }
+            #mapa{
+                width: 80%;
+            }
+        }
+    }
     .encabezado{
-        display: grid;
-        grid-template-areas: 
-         "logo texto redes";
-         grid-template-columns: 30% auto 30%; 
-         #logo{
-            #fotologo{
-                width: 110%;
-                object-fit: contain;
-            }
-        }
-
-        .redes_sociales_header {
-            justify-content: end;
-            align-items: flex-end;
-        
-        }
-        #texto {
-        
-            h1{
-                 font-size: 42px;
-            }
-            h2{
-                font-weight: 400;
-                font-size: 25px;
-                
+        max-width: 768px;
+        flex-direction: row; 
+            #logo{
+                #fotologo{
+                    width: 110%;
+                    object-fit: contain;
+                }
             }
 
-   }
+            .redes_sociales_header {
+                justify-content: end;
+                align-items: flex-end;
+            
+            }
+            #texto {
+            
+                h1{
+                    display: none;
+                    
+                }
+                h2{
+                    font-weight: 400;
+                    font-size: 20px;
+                    
+                    }  
+            }
+    }    
+    
 
    .redes_sociales_header {
-      a{
-        padding: 2px;
+         a{
+            padding: 2px;
 
-        i{
-            width: 60px;
-            height: 60px;
-        }
+            i{
+                width: 60px;
+                height: 60px;
+            }
+
+         }
 
     }
 
-}
-
-}
-
-       /* Navegador */
+    /* Navegador */
         
     nav{
         max-width: 100%;
@@ -366,7 +262,7 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 20px;
             margin-left: 0;
-
+            margin-bottom: 3px;
 
             /*Oculta el checkbox */
             input[type=checkbox]{
@@ -374,48 +270,45 @@
             }
 
            
-            }
+    }
 
-            /* Formulario */
+    /* Formulario */
             .formulario_contacto{
                 display: flex;
                 flex-direction: row;
-                    
-                }
-                
-            #mensaje{
+                gap: 2px;
+                justify-content: space-around;
+                    #mensaje{
                 width: 300px;
                 height: 200px;
                 margin: 10px;
-            }
-            
-            #titulo_contacto{
+                }
+             
+                #titulo_contacto{
                 font-size: 18px;
                 font-weight: 300;
                   }
+                #contactos{
+                    h5{
+                        color: black;
+                     }
+                    p{
+                        color: black;
+                    }
+                    }
+                    
+
+            
+            }
+            
+            
 
     .show-menu {
             display:none;
         }
 
         /*Nosotros*/
-        
-        .grillanosotros {
-            display: grid;
-            grid-template-areas: 
-                "header header header"
-                "nav nav nav"
-                "nos nos nos"
-                "footer footer footer";
-            grid-template-columns: 30% auto 30%;
-            max-width: 1440px;
-          
-            
-        }
-        
-        main{
-            grid-area: nos;
-        }
+ 
         .miviva{
             margin-bottom: 25px;
             section{
@@ -428,12 +321,12 @@
                         p{
                             font-size: 25px;
                             font-weight: 400;
-                         }
+                        }
         
-                  }
-              }
-        
+                }
             }
+        
+        }
             .cv_nosotros{
                 flex-direction: row;
                 .ana{
@@ -461,10 +354,392 @@
                     
             }
 
+    .grillanoticias {
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "aside not_1"
+        "aside not_1"
+        "footer footer";
+        grid-template-columns: 30% auto;
+        max-width: 768px;
+    }
+        
+    aside{
+        max-width: 95%;
+        margin: 5px;
+        .menu_noticias{
+           display: flex;
+           flex-direction: column;
+           position: sticky;
+
+            #titulo_aside{
+                left: 5%;
+           }
+            #listado_noticias{
+                flex-direction: column;
+
+            }        
+
+        }
+    }
+
+    #not_1{
+       
+    .card2{
+    
+       
+        .data_foto{
+                    display: flex;
+                    justify-content: center;
+                    padding: 0px;
+  
+                img{
+                        object-fit: contain;
+                        max-width: 100%;
+                        max-height: 100%;
+                }
+
+                }
+       
+    }
+}
+    .data {
+        
+          max-width: 95%;
+           
+            }
+
+    
+    .grillasindex {
+                
+                max-width: 768px;
+            }
+            
+    .principal{
+                max-width: 768px;
+                    
+            }
+
+    .not_index{
+            display: flex;          
+            justify-content: space-around;
+            .noticia1_index{
+     
+                        margin: 3px;
+                        padding: 3px;
+                .data_foto_index{
+                            display: flex;
+                            justify-content: center;
+                            padding: 0px;
+                            max-width: 320px;
+                            max-height: 180px;
+                            
+                        img{
+                                object-fit: contain;
+                                max-width: 320px;
+                                max-height: 100%;
+                        }
+            
+                    }
+                            
+                            
+                }
+                .data_index{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    padding: 0;
+                    background-color: white; 
+                    width: 320px;
+                    
+                        .content_index{
+                                height: 250px ;
+                                color: black;
+                                padding: 10px;
+
+                            .button_index{
+                                
+                                text-decoration: none;
+                                list-style: none;
+                                color: black;
+                                
+
+                            }
+                             
+                        }
+            
+                }
             
 
+    }
+}
+            
+        
+@media screen and (min-width: 1024px) {
+
+    .grillacontacto{
+        max-width: 1024px;
+    }
+    .grillanosotros {
+        max-width: 1024px;
+    }
+
+    .grillanoticias {
+        max-width: 1024px;
+    }
+    
+    
+    aside{
+        max-width: 95%;
+        margin: 5px;
+        .menu_noticias{
+           display: flex;
+           flex-direction: column;
+           position: sticky;
+
+            #titulo_aside{
+                left: 5%;
+           }
+            #listado_noticias{
+                flex-direction: column;
+
+            }        
+
+        }
+    }
+
+        
+    #not_1{
+       max-width: 600px;
+        .card2{
+            max-width: 600px;
+            .data_foto{
+                        max-width: 600px;
+                        max-height: fit-content;
+    
+                    img{
+                            object-fit: contain;
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+
+                    }
+ 
+            .data {
+                max-width: 600px;
+     
+                }
+        }
+    }
+
+    footer{
+        max-width: 1024px;
+        display: flex;
+        flex-direction: row;
+        #nosotros{
+            width: 300px;
+            #boton{
+                top: 10px;
+                  }
+
+        }          
+        .enlaces_redes{
+            #menu3{
+                margin: 5px;
+            }
+            .redes_sociales{
+                margin: 5px;
+                h5{
+                    font-size: 12px;
+                }
+            }
+            #mapa{
+                width: 100%;
+            }
+    }
+}
+    .encabezado{
+        max-width: 1024px;
+        flex-direction: row; 
+            #logo{
+                #fotologo{
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .redes_sociales_header {
+                justify-content: end;
+                align-items: flex-end;
+            
+            }
+            #texto {
+            
+                h1{
+                    display: none;
+                    
+                }
+                h2{
+                    font-weight: 400;
+                    font-size: 20px;
+                    
+                    }  
+            }
+    }    
+    
+
+   .redes_sociales_header {
+         a{
+            padding: 2px;
+
+            i{
+                width: 60px;
+                height: 60px;
+            }
+
+         }
 
     }
+
+       /* Navegador */
+        
+    nav{
+        max-width: 100%;
+    }
+
+    #menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            margin-left: 0;
+            margin-bottom: 3px;
+
+            /*Oculta el checkbox */
+            input[type=checkbox]{
+                display: none;
+            }
+
+           
+        }
+
+    /* Formulario */
+            .formulario_contacto{
+                display: flex;
+                flex-direction: row;
+                gap: 2px;
+                justify-content: space-around;
+                    #mensaje{
+                width: 400px;
+                height: 400px;
+                margin: 10px;
+                }
+             
+                #titulo_contacto{
+                font-size: 18px;
+                font-weight: 300;
+                  }
+                #contactos{
+                    h5{
+                        color: black;
+                     }
+                    p{
+                        color: black;
+                    }
+                    }
+                    
+
+            
+             }
+            
+            
+
+    .show-menu {
+            display:none;
+        }
+
+       
+        
+        main{
+            
+        
+            .miviva{
+                margin-bottom: 25px;
+                width: 95%;
+                section{
+                    .mensaje{
+                        
+                            h2{
+                                font-size: 45px;
+                                font-weight: 500;
+                            
+                            }
+                            p{
+                                font-size: 25px;
+                                font-weight: 400;
+                            }
+            
+                    }
+                }
+            
+            }
+
+            .cv_nosotros{
+                flex-direction: row;
+                margin-bottom: 10px;
+                .ana{
+                    
+                    max-width: 50%;
+                        
+                }
+            
+                .mario{
+                    max-width: 50%; 
+                   
+                        
+                }
+            
+                .cv{
+                                      
+                    align-items: center;
+                        h3{
+                            font-size: 20px;
+                            font-weight: 500;
+                            
+                         }
+                }
+            
+                    
+            }
+        }
+
+        .grillaservicios{
+            max-width: 1024px;
+        }
+
+        .grillasindex {
+                
+            max-width: 1024px;
+        }
+        
+        .principal{
+            max-width: 1024px;
+                
+        }
+
+                
+
+        }
+
+
+
+       
+
+
+    
 
     
 

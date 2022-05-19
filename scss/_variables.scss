@@ -1,5 +1,7 @@
 $background_nav: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424);
 $background_footer: url(../imagenes/10.jpg);
+$fuente_servicios: Bai Jamjuree, sons-serif;
+$fuente_servicios_ul: Reenie Beanie, cursive;
 
 
 @mixin autor {
@@ -39,7 +41,7 @@ $background_footer: url(../imagenes/10.jpg);
 body{
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 1px;
     
 }
 
