@@ -1,21 +1,10 @@
 @media screen and (min-width: 375px){
-    header{
-        max-width: 375px;
-    }
-  
-    nav{
-        
-        max-width: 375px;
-    }
-
+    
     aside{
         max-width: 375px;
             
     }    
 
-    .grillanosotros {
-        max-width: 375px;
-    }
 
     .grillanoticias {
         max-width: 375px;
@@ -28,25 +17,11 @@
         max-width: 375px;
     }
 
-    footer{
-        max-width: 375px;
-    }
-
-
     .menu_noticias{
         display: none;
     
     }
 
-    .grillasindex {
-     
-        max-width: 375px;
-    }
-    
-    .principal{
-        max-width: 375px;
-       
-    }
 
 }
 
@@ -54,24 +29,12 @@
 
 @media screen and (min-width: 425px){
   
-    header{
-        max-width: 425px;
-    }
-  
-    nav{
-        
-        max-width: 425px;
-    }
-
     aside{
         max-width: 425px;
             
     }    
 
-    .grillanosotros {
-       
-        max-width: 425px;
-    }
+    
 
     .grillanoticias {
         max-width: 425px;
@@ -81,13 +44,7 @@
         max-width: 425px;
     }
 
-    .grillasindex{
-        max-width: 425px;
-    }
-
-    .principal{
-        max-width: 425px;
-    }   
+    
     /* Noticias */
     .cuerpo_noticias{
             margin: 2px;
@@ -133,54 +90,41 @@
     /* footer */
 
     footer{
-        
-        display: inline-block;
+                display: inline-block;
+          }
+
+    
+    
+        #not_1{
         max-width: 425px;
-    }
+            .card2 {
+            
+                .data_foto{
+                    max-width: 425px;
+                    max-height: 300px;
+                
+                }
+                .data{
+                    max-width: 425px;
+                }
+
+                }
+        
+            }
+
 } 
     
-@media screen and (min-width: 425px){
-
-    /* Nosotros */
-   
-    #not_1{
-       max-width: 425px;
-        .card2 {
-           
-            .data_foto{
-                max-width: 425px;
-                max-height: 300px;
-              
-               }
-            .data{
-                max-width: 425px;
-            }
-
-            }
-       
-        }
-
-}
- 
-
-
     
 @media screen and (min-width: 768px) {
 
     .grillacontacto{
         max-width: 768px;
     }
-    .grillanosotros {
-        max-width: 768px;
-    }
-
    
-    .grillaservicios{
-        max-width: 768px;
-    }
 
-    footer{
-        max-width: max-content;
+            /*Footer */
+footer{
+        
         display: flex;
         flex-direction: row;
         #nosotros{
@@ -196,17 +140,17 @@
             }
             .redes_sociales{
                 margin: 5px;
-                h5{
-                    font-size: 12px;
-                }
             }
+            
             #mapa{
                 width: 80%;
             }
         }
     }
+
+     /* Encabezado */
     .encabezado{
-        max-width: 768px;
+        
         flex-direction: row; 
             #logo{
                 #fotologo{
@@ -250,9 +194,7 @@
 
     /* Navegador */
         
-    nav{
-        max-width: 100%;
-    }
+    
 
     #menu {
             display: flex;
@@ -278,12 +220,11 @@
                 flex-direction: row;
                 gap: 2px;
                 justify-content: space-around;
-                    #mensaje{
-                width: 300px;
-                height: 200px;
-                margin: 10px;
+                #mensaje{
+                    width: 300px;
+                    height: 200px;
+                    margin: 10px;
                 }
-             
                 #titulo_contacto{
                 font-size: 18px;
                 font-weight: 300;
@@ -296,19 +237,15 @@
                         color: black;
                     }
                     }
-                    
-
-            
             }
             
-            
-
     .show-menu {
             display:none;
         }
 
         /*Nosotros*/
- 
+    main{
+        max-width: 95%;
         .miviva{
             margin-bottom: 25px;
             section{
@@ -319,40 +256,32 @@
                           
                         }
                         p{
-                            font-size: 25px;
+                            font-size: 20px;
                             font-weight: 400;
                         }
         
                 }
             }
-        
-        }
-            .cv_nosotros{
+        }   
+        .cv_nosotros{
+
                 flex-direction: row;
-                .ana{
-                    
-                    max-width: 50%;
-                        
-                }
-            
-                .mario{
-                    
-                    max-width: 50%;
-                        
-                }
-            
-                .cv{
-                                      
-                    align-items: center;
-                        h3{
-                            font-size: 20px;
-                            font-weight: 500;
-                            
+                
+                    .ana{
+                        max-width: 45%;
+                        .cv{
+                                            
+                            align-items: center;
+                                h3{
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                } 
+                            }
                     }
-                        }
-            
-                    
-            }
+                   
+        }
+        
+    }    
 
     .grillanoticias {
         grid-template-areas: 
@@ -386,110 +315,157 @@
 
     #not_1{
        
-    .card2{
+        .card2{
+
+            .data_foto{
+                        display: flex;
+                        justify-content: center;
+                        padding: 0px;
     
-       
-        .data_foto{
-                    display: flex;
-                    justify-content: center;
-                    padding: 0px;
-  
-                img{
+                    img{
                         object-fit: contain;
                         max-width: 100%;
                         max-height: 100%;
-                }
+                    }
 
-                }
+               }
        
+        }
     }
-}
     .data {
         
           max-width: 95%;
            
             }
 
-    
-    .grillasindex {
-                
-                max-width: 768px;
-            }
-            
-    .principal{
-                max-width: 768px;
+    .grillasindex{
+       
+        display: grid;
+        grid-template-areas: 
+         "header header  "
+         "nav nav"
+         "principal tabla "
+         "servicio servicio"
+         "noticias noticias"
+         "footer footer";
+         grid-template-columns: 60% 40%;
+    }
+    .contenedor_servicios{
+                grid-area: servicio;
+                display: grid;
+                grid-template-areas: 
+                 "menu servicio";
+                grid-template-columns: 20% auto;
+                height: 450px;
+                background-color: beige;
+              .menu_servicios_index{
+                 grid-area: menu;
+                 padding: 2px;
+                 display: flex;
+                 flex-direction: column;
+                   h4{
+                         margin-bottom: 5px;
+                         text-decoration: underline;
+                     }
+                #listado_menu_servicios{
+                    border-right: solid 3px;
+                    border-right-color: rgb(22, 2, 2);
+                } 
                     
-            }
+                }
+ 
+            .menu_detalle_servicios_index{
+                         grid-area: servicio;
+                         margin: 5px;
+                         padding: 2px;            
+                     .detalle_servicios_index{ 
+                         max-width: 500px;
+                        li{
+                            h3{
+                               justify-content: space-around;
+                                                             
+                            }
+                           
+                        }
+                    }     
+            } 
+        }       
+   
+        #hr_servicios{
+            display: none;
+        }
 
     .not_index{
-            display: flex;          
-            justify-content: space-around;
-            .noticia1_index{
-     
-                        margin: 3px;
-                        padding: 3px;
-                .data_foto_index{
-                            display: flex;
-                            justify-content: center;
-                            padding: 0px;
-                            max-width: 320px;
-                            max-height: 180px;
+            grid-area: noticias;
+            display: grid;
+            grid-template-areas: 
+             "titulo titulo"
+             "noticias_1 noticias_1";
+         .titular{
+             grid-area: titulo;
+         }
+         .noticia_grid{
+             grid-area: noticias_1;
+             display: flex;
+             flex-direction: row;    
+             height: 170px;
+           
+                .secundario{
+                            @include noticia_index768;
+                            background-image: url(../imagenes/elon.jpg);
+                        
                             
-                        img{
-                                object-fit: contain;
-                                max-width: 320px;
-                                max-height: 100%;
-                        }
-            
-                    }
-                            
-                            
-                }
-                .data_index{
-                    display: flex;
-                    flex-direction: column;
-                    
-                    padding: 0;
-                    background-color: white; 
-                    width: 320px;
-                    
-                        .content_index{
-                                height: 250px ;
-                                color: black;
-                                padding: 10px;
-
-                            .button_index{
-                                
-                                text-decoration: none;
-                                list-style: none;
-                                color: black;
-                                
-
                             }
-                             
-                        }
-            
-                }
-            
+                .secundario2{
+                            @include noticia_index768;
+                            background-image: url(../imagenes/Nuestros-servicios.jpg);
+                          
+                }            
+        }
+    }
+        .texto_desz:hover .content_index{
+            transform: translateY(-37px);
+                .content_index{
+                    transform: translateY(37px);
+                }  
+    }
+    
+        ::after.texto_desz:hover .content_index {
+            transform: translateY(37px)
+        }
 
+    .tablas{
+            display: block;
+            grid-area: tabla;
+            #tabla{
+                @include tablas;
+            }
+            #tabla_1{
+                display: none;
+                visibility: hidden;
+            }
+            #tabla_2{
+                display: none ;
+                visibility: hidden;
+
+
+            }            
+    
     }
 }
-            
+          
         
 @media screen and (min-width: 1024px) {
 
     .grillacontacto{
         max-width: 1024px;
     }
-    .grillanosotros {
-        max-width: 1024px;
-    }
+    
 
     .grillanoticias {
         max-width: 1024px;
     }
-    
-    
+ 
     aside{
         max-width: 95%;
         margin: 5px;
@@ -517,13 +493,11 @@
             .data_foto{
                         max-width: 600px;
                         max-height: fit-content;
-    
                     img{
                             object-fit: contain;
                             max-width: 100%;
                             max-height: 100%;
                         }
-
                     }
  
             .data {
@@ -534,7 +508,7 @@
     }
 
     footer{
-        max-width: 1024px;
+        
         display: flex;
         flex-direction: row;
         #nosotros{
@@ -560,7 +534,7 @@
     }
 }
     .encabezado{
-        max-width: 1024px;
+        
         flex-direction: row; 
             #logo{
                 #fotologo{
@@ -604,10 +578,6 @@
 
        /* Navegador */
         
-    nav{
-        max-width: 100%;
-    }
-
     #menu {
             display: flex;
             flex-direction: row;
@@ -617,13 +587,7 @@
             font-size: 20px;
             margin-left: 0;
             margin-bottom: 3px;
-
-            /*Oculta el checkbox */
-            input[type=checkbox]{
-                display: none;
-            }
-
-           
+ 
         }
 
     /* Formulario */
@@ -650,23 +614,12 @@
                         color: black;
                     }
                     }
-                    
-
+              }
             
-             }
-            
-            
-
-    .show-menu {
-            display:none;
-        }
-
-       
-        
-        main{
-            
-        
-            .miviva{
+   
+    
+    main{
+        .miviva{
                 margin-bottom: 25px;
                 width: 95%;
                 section{
@@ -674,8 +627,7 @@
                         
                             h2{
                                 font-size: 45px;
-                                font-weight: 500;
-                            
+                                
                             }
                             p{
                                 font-size: 25px;
@@ -685,54 +637,161 @@
                     }
                 }
             
-            }
+        }
 
-            .cv_nosotros{
+        .cv_nosotros{
                 flex-direction: row;
+                justify-content: space-around;
                 margin-bottom: 10px;
+                margin-left: 5px;
                 .ana{
-                    
-                    max-width: 50%;
+                    max-width: 45%;
+                    margin-left: 4px;
+                    .cv{
+                                        
+                        align-items: center;
+                            h3{
+                                font-size: 25px;
+                                
+                            }  
                         
+                    }
                 }
-            
-                .mario{
-                    max-width: 50%; 
-                   
-                        
-                }
-            
-                .cv{
-                                      
-                    align-items: center;
-                        h3{
-                            font-size: 20px;
-                            font-weight: 500;
-                            
-                         }
-                }
-            
-                    
-            }
-        }
-
-        .grillaservicios{
-            max-width: 1024px;
-        }
-
-        .grillasindex {
                 
-            max-width: 1024px;
-        }
+            
+                
+        }            
+                    
         
+    }
+                            /* Index */
+    .grillasindex{
+                   
+            grid-template-areas: 
+             "header header  "
+             "nav nav"
+             "principal tabla "
+             "servicio tabla"
+             "noticias tabla"
+             "footer footer";
+            grid-template-columns: 70% 30%; 
+        }
         .principal{
-            max-width: 1024px;
-                
+            max-width: 760px;
+            padding: 6px;
+            margin: 6px;
         }
 
-                
+        .contenedor_servicios{
+ 
+                 .menu_servicios_index{
+                                     
+                         h4{
+                            font-size: 20px;
+                           }
+                }
+     
+                .menu_detalle_servicios_index{
+                    .detalle_servicios_index{ 
+                             max-width: 550px;
+                                                        
+                        }     
+                } 
+            }       
 
-        }
+
+        .not_index{
+               display: grid;
+               grid-template-areas: 
+                "titulo titulo"
+                "noticias noticias";
+            .titular{
+                grid-area: titulo;
+            }
+            .noticia_grid{
+                grid-area: noticias;
+                display: flex;
+                flex-direction: row;
+                height: auto;
+                    .secundario{
+                                @include noticia_index1024;
+                                
+                                background-image: url(../imagenes/elon.jpg);
+                                
+                                }
+                    .secundario2{
+                                @include noticia_index1024;
+                                background-image: url(../imagenes/Nuestros-servicios.jpg);
+            
+                    }  
+                       
+            }  
+    }        
+    .tablas{
+            grid-area: tabla;
+            #tabla{
+                table-layout: fixed;
+                @include tablas;
+            }
+            #tabla_1{
+                visibility: visible;
+                
+                @include tablas;
+
+                
+            }
+            #tabla_2{
+                visibility: visible;
+                
+                @include tablas;
+
+            } 
+           .link_interes{
+               p{
+                   font-size: 25px;
+                   font-weight: 400;
+                   text-decoration: underline;
+                   font-family: 'Courier New', Courier, monospace;
+               }
+               display: flex;
+               flex-direction: column;
+               margin: 2px;
+               padding: 3px;
+               align-items: center;
+                  
+               
+               div{
+                   margin: 2px;
+               }
+           } 
+            
+
+               
+        
+    }
+
+
+
+
+
+
+
+
+
+
+       
+}
+
+         
+         
+         
+        
+
+
+
+
+
+    
 
 
 

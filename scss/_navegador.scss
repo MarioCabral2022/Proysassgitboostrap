@@ -4,7 +4,6 @@ nav{
     background-color: #252323;
     background-size: 20px 20px;
     padding: 3px;
-   
     position: static;
     top: 15px;
     max-width: 100%;
@@ -26,7 +25,14 @@ nav{
                 padding: 10px;
                 margin: 2px; 
                 color: white;
+                -webkit-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                &:hover{
+                    background: none;
+                    color: #6ab1c9;
+                                  
              }
+            }
 
             }
     }

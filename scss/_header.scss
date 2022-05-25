@@ -1,13 +1,11 @@
 header{
     grid-area: header;
-    max-width: 320px;
+    max-width: 1440px;
+    background-color:$background_footer;
 }
 .encabezado{
    display: flex;
    flex-direction: column;
-   background-image: url(../imagenes/10.jpg);
-   
-   
       #logo{
             display: flex;
             justify-content: center;
