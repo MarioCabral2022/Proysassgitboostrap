@@ -8,9 +8,9 @@ nav{
     top: 15px;
     max-width: 100%;
     left: 15%;
-    
-       
+        
 }
+
 #menu {
     position: static;
     display: none;
@@ -20,29 +20,23 @@ nav{
     margin-top: 6px;
         li{
             margin-bottom: 5px;
-
+            list-style: none;
+            text-decoration: none;
             a{
                 padding: 10px;
                 margin: 2px; 
                 color: white;
                 -webkit-transition: all 0.5s ease;
                 transition: all 0.5s ease;
+                
                 &:hover{
                     background: none;
                     color: #6ab1c9;
-                                  
-             }
+                }
             }
-
-            }
-    }
-            
-
-.navegacion ul, li a {
-    list-style: none;
-    text-decoration: none;
+        }
 }
-
+            
 
 .show-menu {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -54,6 +48,7 @@ nav{
     text-align: center;
     padding: 10px 0;
     display: block;
+    -webkit-transition: all 0.5s ease;
     transition:all 0.5s ease;
     margin-top: 6px;
    

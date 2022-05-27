@@ -1,30 +1,74 @@
 $background_nav: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424);
-$background_footer:rgba(209, 224, 243, 0.993);  
+$background_footer: linear-gradient(269deg,hsl(215, 14%, 60%),hsl(215, 21%, 52%),hsl(215, 43%, 55%),hsl(215, 45%, 50%),hsl(215, 59%, 64%),hsl(215, 55%, 75%));
 $fuente_titulos:Source Serif Pro, serif;
 $fuente_servicios: Bai Jamjuree, sons-serif;
 $fuente_servicios_ul: Reenie Beanie, cursive;
 $fuente_titulos: Merienda, cursive;
 $fuente_texto_servicios:DM Sans, sans-serif;
 
-@mixin autor {
-        font-size: 8px;
+@mixin fondo_movil{
+    background-size: 800% 800%;
+    -webkit-animation: 15s ease infinite;
+    animation: fondo 15s ease infinite;   
+    -moz-animation: fondo 15s ease infinite;
+    @keyframes fondo{
+        0%{background-position: 0% 51%}
+        50%{background-position: 100% 50%}
+        100%{background-position: 0% 51%}
+    }
+    
+    @-webkit-keyframes fondo{
+        0%{background-position: 0% 51%}
+        50%{background-position: 100% 50%}
+        100%{background-position: 0% 51%}
+    }
+    
+    @-moz-keyframes fondo{
+        0%{background-position: 0% 51%}
+        50%{background-position: 100% 50%}
+        100%{background-position: 0% 51%}
+    }
+}
+
+@mixin autor($font1){
+        font-size: $font1;
+        font-family: sans-serif;
         padding: 3px;
         margin: 8px;
         justify-items: left;
 
+@keyframes fondo{
+    0%{background-position: 0% 51%}
+    50%{background-position: 100% 50%}
+    100%{background-position: 0% 51%}
 }
 
-@mixin titulo {
+@-webkit-keyframes fondo{
+    0%{background-position: 0% 51%}
+    50%{background-position: 100% 50%}
+    100%{background-position: 0% 51%}
+}
+
+@-moz-keyframes fondo{
+    0%{background-position: 0% 51%}
+    50%{background-position: 100% 50%}
+    100%{background-position: 0% 51%}
+}
+
+
+}
+
+@mixin titulo($font2, $font-weight){
         font-family: sans-serif;
-        font-weight: 300;
+        font-weight: $font-weight;
+        text-align: justify;
         margin-top: 10px;
-        font-size: 13px;
+        font-size: $font2;
         
 }
 
-@mixin texto_noticia {
-  
-    font-size: 10px;
+@mixin texto_noticia($font3) {
+    font-size: $font3;
     margin: 0px;
     color: black ;
     
@@ -41,14 +85,14 @@ $fuente_texto_servicios:DM Sans, sans-serif;
     color: red;
 }
 
-@mixin servicios {
+@mixin servicios ($fontsize,$width,$altura) {
                 color: black;
                 text-decoration: none;
                 font-family: $fuente_servicios_ul;
                 padding: 10px;
-                width: 80px;
-                height: 12px;
-                font-size: 25px;
+                width: $width;
+                height: $altura;
+                font-size: $fontsize;
 }
 
 @mixin hr{
@@ -58,128 +102,38 @@ $fuente_texto_servicios:DM Sans, sans-serif;
 }
 
 
-@mixin noticia_index{
+@mixin noticia_index($height,$width){
     margin: 3px;
-   
-    height: 300px;
-    background-size: cover;
+    background-size:cover;
     max-width: 1440px;
-    width: 95%;
-    height: 170px;
+    width: $width;
+    height: $height;
     overflow: hidden;
-    .content_index{
-        position: relative;
-        top: 115px;
-        padding: 10px;
-        height: 97px;
-        background-color: white;
-        transition-property: initial;
-        transition-duration: 1s;
-        
-            .autor {
-                    @include autor
-                
-                }
-
-            .title {
-                    @include titulo
-
-            }
-            .text  {
-                @include texto_noticia
-                }
-
-            .button_index{
-                @include boton_leer_mas
-            }
-    }         
-
 }
 
 
-@mixin noticia_index768{
-    margin: 3px;
-    
-    background-size: cover;
-    max-width: 1440px;
-    width: 95%;
-    
-    overflow: hidden;
-    .content_index{
+@mixin content_index($top,$height){        
         position: relative;
-        top: 120px;
+        top: $top;
         padding: 10px;
-        height: 97px;
+        height: $height;
         background-color: white;
         transition-property: initial;
         transition-duration: 1s;
-        
-            .autor {
-                    @include autor
-                
-                }
-
-            .title {
-                    @include titulo
-
-            }
-            .text  {
-                @include texto_noticia
-                }
-
-            .button_index{
-                @include boton_leer_mas
-            }
+                  
     }         
-
-}
-
-
-@mixin noticia_index1024{
-    margin: 3px;
-    background-size: cover;
-    max-width: 1440px;
-    width: 95%;
-    height: 250px;
-    overflow: hidden;
-    .content_index{
-        position: relative;
-        top: 190px;
-        padding: 10px;
-        height: 97px;
-        background-color: white;
-        transition-property: initial;
-        transition-duration: 1s;
-        
-            .autor {
-                    @include autor
-                
-                }
-
-            .title {
-                    @include titulo
-
-            }
-            .text  {
-                @include texto_noticia
-                }
-
-            .button_index{
-                @include boton_leer_mas
-            }
-    }         
-
-}
 
 @mixin tablas {
     table-layout: fixed;
     border-collapse: collapse;
-    background-color: white;
     display: block;
     width: 95%;
     margin-top: 40px;
     margin-right: 10px;
     margin-left: 5px;
+        caption{
+            background-color: white;;
+        }
 
     thead th:nth-child(1){
         width: 105px;
@@ -240,10 +194,7 @@ body{
     display: flex;
     justify-content: center;
     margin: 1px;
-    @if expr {
-        
-    }
-    background-image: url(../imagenes/pexels-inga-seliverstova-4304748.jpg);
+    background-color: rgba(192, 211, 229, 0.849);
 }
 
 

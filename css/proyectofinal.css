@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 1px;
-  background-image: url(../imagenes/pexels-inga-seliverstova-4304748.jpg); }
+  background-color: rgba(192, 211, 229, 0.849); }
 
 nav {
   grid-area: nav;
@@ -29,7 +29,9 @@ nav {
   margin-left: 30px;
   margin-top: 6px; }
   #menu li {
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    list-style: none;
+    text-decoration: none; }
     #menu li a {
       padding: 10px;
       margin: 2px;
@@ -39,10 +41,6 @@ nav {
       #menu li a:hover {
         background: none;
         color: #6ab1c9; }
-
-.navegacion ul, li a {
-  list-style: none;
-  text-decoration: none; }
 
 .show-menu {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -54,6 +52,7 @@ nav {
   text-align: center;
   padding: 10px 0;
   display: block;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   margin-top: 6px; }
 
@@ -66,7 +65,35 @@ input[type=checkbox]:checked ~ #menu {
 header {
   grid-area: header;
   max-width: 1440px;
-  background-color: rgba(209, 224, 243, 0.993); }
+  background: linear-gradient(269deg, #8b97a7, #6b809e, #5b84be, #4676b9, #6d9ad9, #9cb9e2);
+  background-size: 800% 800%;
+  -webkit-animation: 15s ease infinite;
+  animation: fondo 15s ease infinite;
+  -moz-animation: fondo 15s ease infinite; }
+
+@keyframes fondo {
+  0% {
+    background-position: 0% 51%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 51%; } }
+
+@-webkit-keyframes fondo {
+  0% {
+    background-position: 0% 51%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 51%; } }
+
+@-moz-keyframes fondo {
+  0% {
+    background-position: 0% 51%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 51%; } }
 
 .encabezado {
   display: flex;
@@ -117,8 +144,36 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: rgba(209, 224, 243, 0.993);
-  max-width: 1440px; }
+  background: linear-gradient(269deg, #8b97a7, #6b809e, #5b84be, #4676b9, #6d9ad9, #9cb9e2);
+  max-width: 1440px;
+  background-size: 800% 800%;
+  -webkit-animation: 15s ease infinite;
+  animation: fondo 15s ease infinite;
+  -moz-animation: fondo 15s ease infinite; }
+
+@keyframes fondo {
+  0% {
+    background-position: 0% 51%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 51%; } }
+
+@-webkit-keyframes fondo {
+  0% {
+    background-position: 0% 51%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 51%; } }
+
+@-moz-keyframes fondo {
+  0% {
+    background-position: 0% 51%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 51%; } }
 
 #nosotros {
   color: black;
@@ -140,7 +195,11 @@ footer {
   left: 30%;
   background-color: darkgrey;
   border-radius: 30%;
-  padding: 15px; }
+  padding: 15px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s; }
+  #boton:hover {
+    background-color: #168ae9; }
   #boton a {
     list-style: none;
     text-decoration: none;
@@ -192,10 +251,14 @@ footer {
     padding: 2px;
     font-size: 10px;
     margin: 3px; }
+    .enlaces_redes .redes_sociales a:hover {
+      background: darkgray; }
     .enlaces_redes .redes_sociales a i {
       padding: 5px;
       margin: 1px;
       font-size: 12px; }
+      .enlaces_redes .redes_sociales a i:hover {
+        color: white; }
 
 #medios {
   border-top: solid 3px black;
@@ -210,13 +273,15 @@ footer {
     width: 90%; }
 
 .index {
-  background-image: url(../imagenes/pexels-henry-&-co-1939485.jpg); }
+  background-color: rgba(192, 211, 229, 0.849); }
 
 .grillasindex {
   display: flex;
   flex-direction: column;
-  max-width: 1024px; }
+  max-width: 1440px;
+  background-image: url(../imagenes/fondobody.jpg); }
 
+/* Frases en Index con slide*/
 .principal {
   grid-area: principal;
   max-width: 1024px;
@@ -229,15 +294,17 @@ footer {
     .principal .frases ul {
       display: flex;
       padding: 5px;
-      width: 405%;
+      width: 400%;
       animation: slide 80s infinite alternate ease-in-out; }
       .principal .frases ul li {
         list-style: none;
         margin: 8px; }
         .principal .frases ul li img {
           object-fit: contain;
-          width: 100%; }
+          width: 100%;
+          overflow: hidden; }
 
+/* Espaciados de tiempo para slide */
 @keyframes slide {
   0% {
     margin-left: 0%; }
@@ -256,6 +323,7 @@ footer {
   100% {
     margin-left: -300%; } }
 
+/*Seccion de servicios del estudio */
 .contenedor_servicios {
   display: flex;
   flex-direction: row;
@@ -264,7 +332,7 @@ footer {
     display: flex;
     justify-content: center;
     font-family: Reenie Beanie, cursive;
-    font-size: 35px;
+    font-size: 25px;
     margin: 2px; }
   .contenedor_servicios .menu_servicios_index #listado_menu_servicios {
     display: flex;
@@ -333,25 +401,27 @@ footer {
         background: -webkit-linear-gradient(black, #1bc763, #c9ad12);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text; }
-  .contenedor_servicios .detalle_servicios_index {
+  .contenedor_servicios .menu_detalle_servicios_index .detalle_servicios_index {
     list-style: none;
     margin: 5px;
     max-width: 95%;
     height: 700px;
     padding: 2px;
     width: 100%; }
-    .contenedor_servicios .detalle_servicios_index li {
+    .contenedor_servicios .menu_detalle_servicios_index .detalle_servicios_index li {
       position: absolute;
       opacity: 0;
       max-width: inherit;
       max-height: inherit;
       background-color: white;
-      transition: opacity 0.5s; }
-      .contenedor_servicios .detalle_servicios_index li:first-child {
+      transition: opacity 0.5s;
+      min-height: 600px;
+      box-shadow: 0 0 0 0.3em #50507a; }
+      .contenedor_servicios .menu_detalle_servicios_index .detalle_servicios_index li:first-child {
         opacity: 1; }
-      .contenedor_servicios .detalle_servicios_index li:target {
+      .contenedor_servicios .menu_detalle_servicios_index .detalle_servicios_index li:target {
         opacity: 1; }
-      .contenedor_servicios .detalle_servicios_index li h3 {
+      .contenedor_servicios .menu_detalle_servicios_index .detalle_servicios_index li h3 {
         font-family: 'Indie Flower', cursive;
         font-size: 20px;
         display: flex;
@@ -359,7 +429,7 @@ footer {
         justify-content: center;
         margin: 2px;
         margin-top: 4px; }
-      .contenedor_servicios .detalle_servicios_index li p {
+      .contenedor_servicios .menu_detalle_servicios_index .detalle_servicios_index li p {
         margin: 5px;
         font-family: Bai Jamjuree, sons-serif; }
 
@@ -387,6 +457,7 @@ footer {
   text-align: center;
   max-width: 90%; }
 
+/* Seccion Noticias de Interes */
 .not_index {
   display: flex;
   flex-direction: column;
@@ -415,33 +486,28 @@ footer {
         margin: 1px; }
   .not_index .noticia_grid .secundario {
     margin: 3px;
-    height: 300px;
     background-size: cover;
     max-width: 1440px;
-    width: 95%;
+    width: 300px;
     height: 170px;
     overflow: hidden;
-    background-image: url(../imagenes/elon.jpg); }
+    background-image: url(../imagenes/uber.jpg); }
     .not_index .noticia_grid .secundario .content_index {
       position: relative;
-      top: 115px;
+      top: 112px;
       padding: 10px;
       height: 97px;
       background-color: white;
       transition-property: initial;
       transition-duration: 1s; }
-      .not_index .noticia_grid .secundario .content_index .autor {
-        font-size: 8px;
-        padding: 3px;
-        margin: 8px;
-        justify-items: left; }
       .not_index .noticia_grid .secundario .content_index .title {
         font-family: sans-serif;
         font-weight: 300;
+        text-align: justify;
         margin-top: 10px;
-        font-size: 13px; }
+        font-size: 10px; }
       .not_index .noticia_grid .secundario .content_index .text {
-        font-size: 10px;
+        font-size: 13px;
         margin: 0px;
         color: black; }
       .not_index .noticia_grid .secundario .content_index .button_index {
@@ -455,33 +521,28 @@ footer {
         color: red; }
   .not_index .noticia_grid .secundario2 {
     margin: 3px;
-    height: 300px;
     background-size: cover;
     max-width: 1440px;
-    width: 95%;
+    width: 300px;
     height: 170px;
     overflow: hidden;
     background-image: url(../imagenes/Nuestros-servicios.jpg); }
     .not_index .noticia_grid .secundario2 .content_index {
       position: relative;
-      top: 115px;
+      top: 118px;
       padding: 10px;
       height: 97px;
       background-color: white;
       transition-property: initial;
       transition-duration: 1s; }
-      .not_index .noticia_grid .secundario2 .content_index .autor {
-        font-size: 8px;
-        padding: 3px;
-        margin: 8px;
-        justify-items: left; }
       .not_index .noticia_grid .secundario2 .content_index .title {
         font-family: sans-serif;
         font-weight: 300;
+        text-align: justify;
         margin-top: 10px;
-        font-size: 13px; }
+        font-size: 10px; }
       .not_index .noticia_grid .secundario2 .content_index .text {
-        font-size: 10px;
+        font-size: 13px;
         margin: 0px;
         color: black; }
       .not_index .noticia_grid .secundario2 .content_index .button_index {
@@ -494,6 +555,7 @@ footer {
         list-style: none;
         color: red; }
 
+/* Efecto Hoover para las noticias */
 .texto_desz:hover .content_index {
   transform: translateY(-40px); }
   .texto_desz:hover .content_index .content_index {
@@ -502,6 +564,7 @@ footer {
 ::after.texto_desz:hover .content_index {
   transform: translateY(40px); }
 
+/* Tablas se anula para versiones en celulares */
 .tabla_cotizacion #tabla {
   display: none; }
 
@@ -511,142 +574,27 @@ footer {
 .tablas {
   display: none; }
 
-.prueba_contenedor {
-  display: grid;
-  grid-template-areas: "menu servicio";
-  grid-template-columns: 20% auto;
-  max-width: 768px;
-  height: 450px;
-  background-color: beige; }
-
-.prueba_menu_servicios_index {
-  grid-area: menu;
-  padding: 2px;
+.grillanoticias {
   display: flex;
   flex-direction: column;
-  border-right: solid 3px;
-  border-right-color: #160202; }
-  .prueba_menu_servicios_index h4 {
-    display: flex;
-    justify-content: center;
-    font-family: Reenie Beanie, cursive;
-    font-size: 35px;
-    margin-bottom: 5px;
-    text-decoration: underline; }
-  .prueba_menu_servicios_index #prueba_listado_menu_servicios {
-    padding: 15px;
-    margin: 5px;
-    list-style: none; }
-    .prueba_menu_servicios_index #prueba_listado_menu_servicios li {
-      position: relative;
-      padding: 10px; }
-      .prueba_menu_servicios_index #prueba_listado_menu_servicios li #prueba_notarial_i {
-        color: black;
-        text-decoration: none;
-        font-family: Reenie Beanie, cursive;
-        padding: 10px;
-        width: 80px;
-        height: 12px;
-        font-size: 25px;
-        background: -webkit-linear-gradient(blue, red);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text; }
-      .prueba_menu_servicios_index #prueba_listado_menu_servicios li #prueba_contable_i {
-        color: black;
-        text-decoration: none;
-        font-family: Reenie Beanie, cursive;
-        padding: 10px;
-        width: 80px;
-        height: 12px;
-        font-size: 25px;
-        background: -webkit-linear-gradient(black, blue);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        left: 60px; }
-      .prueba_menu_servicios_index #prueba_listado_menu_servicios li #prueba_impuestos_i {
-        color: black;
-        text-decoration: none;
-        font-family: Reenie Beanie, cursive;
-        padding: 10px;
-        width: 80px;
-        height: 12px;
-        font-size: 25px;
-        background: -webkit-linear-gradient(rgba(13, 95, 38, 0.616), blue);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text; }
-      .prueba_menu_servicios_index #prueba_listado_menu_servicios li #prueba_rrhh_i {
-        color: black;
-        text-decoration: none;
-        font-family: Reenie Beanie, cursive;
-        padding: 10px;
-        width: 80px;
-        height: 12px;
-        font-size: 25px;
-        background: -webkit-linear-gradient(black, #918f14);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text; }
-      .prueba_menu_servicios_index #prueba_listado_menu_servicios li #prueba_payroll_i {
-        color: black;
-        text-decoration: none;
-        font-family: Reenie Beanie, cursive;
-        padding: 10px;
-        width: 80px;
-        height: 12px;
-        font-size: 25px;
-        background: -webkit-linear-gradient(black, #1bc763, #c9ad12);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text; }
-
-.prueba_menu_detalle_servicios_index {
-  grid-area: servicio;
-  margin: 5px;
-  padding: 2px; }
-  .prueba_menu_detalle_servicios_index .prueba_detalle_servicios_index {
-    max-width: 500px;
-    list-style: none; }
-    .prueba_menu_detalle_servicios_index .prueba_detalle_servicios_index li {
-      position: absolute;
-      opacity: 0;
-      max-width: inherit;
-      background-color: white;
-      transition: opacity 0.5s; }
-      .prueba_menu_detalle_servicios_index .prueba_detalle_servicios_index li:first-child {
-        opacity: 1; }
-      .prueba_menu_detalle_servicios_index .prueba_detalle_servicios_index li:target {
-        opacity: 1; }
-      .prueba_menu_detalle_servicios_index .prueba_detalle_servicios_index li h3 {
-        font-family: 'Indie Flower', cursive;
-        font-size: 20px;
-        display: flex;
-        justify-content: space-around;
-        text-decoration: underline;
-        margin: 2px;
-        margin-top: 4px; }
-      .prueba_menu_detalle_servicios_index .prueba_detalle_servicios_index li p {
-        margin: 5px;
-        font-family: Bai Jamjuree, sons-serif; }
-
-.grillanoticias {
-  display: grid;
-  grid-template-areas: "header  " "nav " "aside " "not_1" "footer ";
-  max-width: 320px;
+  max-width: 1440px;
   justify-content: center;
   margin: 0px;
   background-image: url(../imagenes/dirty-pattern-paint-room-blockv2.jpg); }
 
 aside {
-  grid-area: aside;
-  max-width: 320px; }
+  display: none; }
 
+/* Menu de Noticias */
 .menu_noticias {
-  background-color: rgba(5, 3, 29, 0.24);
+  background-color: rgba(152, 151, 167, 0.24);
   max-width: 100%;
   top: 90px;
   border: 10px; }
   .menu_noticias #titulo_aside {
-    font-size: 24px;
+    font-size: 20px;
     text-decoration: underline;
-    color: white;
+    color: black;
     position: relative;
     left: 20%; }
   .menu_noticias #listado_noticias {
@@ -662,49 +610,69 @@ aside {
         color: black; }
 
 /* Seccion de Noticias */
-#not_1 {
-  grid-area: not_1;
+.not_1 {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  max-width: 320px; }
-  #not_1 .card2 {
+  align-items: center; }
+  .not_1 .card2 {
     margin: 3px;
     padding: 3px; }
-    #not_1 .card2 .data_foto {
+    .not_1 .card2 .data_foto {
       display: flex;
       justify-content: center;
       padding: 0px;
-      max-width: 320px;
+      margin: 3px;
       max-height: 180px; }
-      #not_1 .card2 .data_foto img {
-        object-fit: contain;
-        max-width: 100%;
-        max-height: 100%; }
-  #not_1 .data {
+      .not_1 .card2 .data_foto img {
+        max-width: 100%; }
+  .not_1 .data {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-color: white;
-    max-width: 320px; }
-    #not_1 .data .content {
+    background-color: white; }
+    .not_1 .data .content {
       color: black; }
-      #not_1 .data .content .author {
-        font-size: 8px;
+      .not_1 .data .content .autor {
+        font-size: 10px;
+        font-family: sans-serif;
         padding: 3px;
         margin: 8px;
         justify-items: left; }
-      #not_1 .data .content .title {
+
+@keyframes fondo {
+  0% {
+    background-position: 0% 51%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 51%; } }
+
+@-webkit-keyframes fondo {
+  0% {
+    background-position: 0% 51%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 51%; } }
+
+@-moz-keyframes fondo {
+  0% {
+    background-position: 0% 51%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 51%; } }
+      .not_1 .data .content .title {
         font-family: sans-serif;
         font-weight: 300;
+        text-align: justify;
         margin-top: 10px;
-        font-size: 13px; }
-      #not_1 .data .content .text {
-        font-size: 10px;
+        font-size: 18px; }
+      .not_1 .data .content .text {
+        font-size: 14px;
         margin: 0px;
         color: black; }
-      #not_1 .data .content .button {
+      .not_1 .data .content .button {
         display: flex;
         justify-content: right;
         padding: 2px;
@@ -715,55 +683,54 @@ aside {
         color: red; }
 
 .grillanosotros {
-  background-image: url(../imagenes/pexels-karolina-grabowska-4709425.jpg);
-  display: grid;
+  background-image: url(../imagenes/fondonosotros.jpg);
   grid-template-areas: "header" "nav" "main" "footer";
-  max-width: 1024px;
+  max-width: 1440px;
   margin: 0px;
   gap: 1px; }
 
-main {
+.nosotros {
   grid-area: main; }
-  main .miviva {
+  .nosotros .miviva {
     margin-bottom: 15px; }
-    main .miviva section .mensaje {
+    .nosotros .miviva section .mensaje {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 3px;
       margin: 5px; }
-      main .miviva section .mensaje h2 {
+      .nosotros .miviva section .mensaje h2 {
         font-size: 25px;
         font-weight: bold;
         font-family: Merienda, cursive;
         text-decoration: underline; }
-      main .miviva section .mensaje p {
+      .nosotros .miviva section .mensaje p {
         font-size: 15px;
         font-weight: 200;
         font-style: italic;
         font-family: DM Sans, sans-serif;
         text-align: justify; }
-  main .cv_nosotros {
+  .nosotros .cv_nosotros {
     display: flex;
     flex-direction: column; }
-    main .cv_nosotros .ana, main .cv_nosotros .mario {
+    .nosotros .cv_nosotros .ana, .nosotros .cv_nosotros .mario {
       display: flex;
       flex-direction: row;
       max-width: 95%;
       margin-top: 10px; }
-      main .cv_nosotros .ana img, main .cv_nosotros .mario img {
+      .nosotros .cv_nosotros .ana img, .nosotros .cv_nosotros .mario img {
         width: 50%;
         margin-right: 3px; }
-      main .cv_nosotros .ana .cv, main .cv_nosotros .mario .cv {
+      .nosotros .cv_nosotros .ana .cv, .nosotros .cv_nosotros .mario .cv {
         width: 50%; }
-        main .cv_nosotros .ana .cv h3, main .cv_nosotros .mario .cv h3 {
+        .nosotros .cv_nosotros .ana .cv h3, .nosotros .cv_nosotros .mario .cv h3 {
           position: relative;
           left: 6%;
           text-decoration: underline;
           font-size: 16px;
           font-family: Bai Jamjuree, sons-serif;
           font-weight: bold; }
-        main .cv_nosotros .ana .cv p, main .cv_nosotros .mario .cv p {
+        .nosotros .cv_nosotros .ana .cv p, .nosotros .cv_nosotros .mario .cv p {
           font-weight: 400;
           font-size: 10px;
           font-family: DM Sans, sans-serif;
@@ -779,25 +746,37 @@ hr {
 
 .grilla_noticias_1 {
   display: grid;
-  grid-template-areas: "header header " "nav nav " "informe informe" "footer footer ";
-  grid-template-columns: 30% 70%;
-  max-width: 1200px;
-  background-color: antiquewhite;
+  grid-template-areas: "header  " "nav " "informe " "footer  ";
+  max-width: 1024px;
+  background-color: #e7ebf0;
   justify-content: center;
   margin: 0px; }
 
 .cuerpo_noticias {
   grid-area: informe;
   box-sizing: content-box;
-  margin: 15px;
-  padding: 15px; }
-  .cuerpo_noticias .informe_texto {
-    padding: 80px;
-    margin: 20px;
+  margin: 5px;
+  padding: 5px; }
+  .cuerpo_noticias .informe_texto h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: 300;
+    text-align: justify; }
+  .cuerpo_noticias .informe_texto p {
+    margin: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 100;
     text-align: justify; }
+  .cuerpo_noticias .informe_texto strong {
+    margin: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: justify; }
+  .cuerpo_noticias .informe_texto h6 {
+    font-size: 24px; }
 
 #detalle_liq {
   display: flex;
@@ -806,103 +785,104 @@ hr {
   #detalle_liq p {
     margin: 1px; }
 
+#destaque_1 {
+  font-size: 16px;
+  color: red;
+  text-decoration: underline;
+  font-weight: 200; }
+
 .grillacontacto {
   display: grid;
   grid-template-areas: "header" "nav" "form" "footer";
-  background-color: antiquewhite;
-  max-width: 320px;
+  max-width: 1440px;
   margin: 0px;
   gap: 1px; }
 
 .formulario {
   grid-area: form;
-  background-image: url(../imagenes/894.jpg);
+  background-image: url(../imagenes/fondocontacto.webp);
   background-size: cover;
-  width: 100%; }
-
-.formulario_contacto {
-  display: flex;
-  flex-direction: column; }
-  .formulario_contacto #formulario_cuerpo {
-    background-color: transparent;
-    padding: 5px;
-    margin-bottom: 50px;
-    margin-top: 20px;
-    box-sizing: border-box; }
-    .formulario_contacto #formulario_cuerpo .titulo_formulario {
-      text-align: center;
-      font-size: 20px;
-      color: black; }
-
-.datos {
-  border-bottom: 2px solid #800808;
-  margin: 0;
-  padding: 0; }
-
-#nombre, #mail, #celular {
-  border: none; }
-
-#enviar {
-  justify-content: center; }
-  #enviar .btn {
-    border-radius: 8px;
-    padding: 10px 5px;
-    margin: 5px;
-    width: 95%;
-    align-items: center;
-    background-color: none;
-    --color: rgb(194, 19, 19);
-    --hover: #110f8f;
-    color: var(--color);
-    -webkit-transition: 0.25s;
-    transition: 0.25s; }
-    #enviar .btn:hover, #enviar .btn:focus {
-      box-shadow: inset 0 0 0 2em var(--hover);
-      border-color: var(--hover);
-      color: #236edf; }
-
-#contactos {
-  padding: 30px;
-  margin-right: 15%;
-  margin-bottom: 50px;
-  margin-top: 20px;
-  margin-left: 10%;
-  box-sizing: border-box; }
-  #contactos p {
-    font-size: 20px;
-    font-weight: 300;
-    color: black; }
-
-#mensaje {
-  width: 300px;
-  height: 300px;
-  margin: 1px; }
-
-#titulo_contacto {
-  font-size: 25px;
-  font-weight: 400;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-style: oblique; }
+  width: 100%;
+  max-width: 320px; }
+  .formulario .formulario_contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .formulario .formulario_contacto #formulario_cuerpo {
+      background-color: transparent;
+      padding: 5px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      box-sizing: border-box; }
+      .formulario .formulario_contacto #formulario_cuerpo #nombre, .formulario .formulario_contacto #formulario_cuerpo #mail, .formulario .formulario_contacto #formulario_cuerpo #celular {
+        border: 0;
+        outline: none;
+        background-color: transparent; }
+      .formulario .formulario_contacto #formulario_cuerpo #mensaje {
+        width: 300px;
+        height: 300px; }
+      .formulario .formulario_contacto #formulario_cuerpo .datos {
+        border-bottom: 2px solid #800808;
+        margin: 0;
+        padding: 0; }
+      .formulario .formulario_contacto #formulario_cuerpo .titulo_formulario {
+        text-align: center;
+        font-size: 20px;
+        color: black;
+        text-decoration: underline; }
+      .formulario .formulario_contacto #formulario_cuerpo #enviar {
+        justify-content: center; }
+        .formulario .formulario_contacto #formulario_cuerpo #enviar .btn {
+          border-radius: 8px;
+          padding: 10px 5px;
+          margin: 5px;
+          width: 95%;
+          align-items: center;
+          background-color: none;
+          --color: rgb(194, 19, 19);
+          --hover: #110f8f;
+          color: var(--color);
+          -webkit-transition: 0.25s;
+          transition: 0.25s; }
+          .formulario .formulario_contacto #formulario_cuerpo #enviar .btn:hover, .formulario .formulario_contacto #formulario_cuerpo #enviar .btn:focus {
+            box-shadow: inset 0 0 0 2em var(--hover);
+            border-color: var(--hover);
+            color: #236edf; }
+    .formulario .formulario_contacto #contactos {
+      padding: 10px;
+      margin: 8px;
+      max-width: 85%;
+      background-color: white;
+      box-shadow: 0 0 0 0.5em black; }
+      .formulario .formulario_contacto #contactos #titulo_contacto {
+        margin: 8px;
+        font-size: 25px;
+        font-weight: 400;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: oblique; }
+      .formulario .formulario_contacto #contactos p {
+        font-size: 20px;
+        font-weight: 300;
+        color: black; }
+      .formulario .formulario_contacto #contactos .redes_sociales_contactos {
+        flex-direction: row;
+        align-items: center; }
+        .formulario .formulario_contacto #contactos .redes_sociales_contactos a {
+          padding: 5px;
+          color: black; }
+          .formulario .formulario_contacto #contactos .redes_sociales_contactos a i {
+            width: 35px;
+            height: 35px; }
 
 @media screen and (min-width: 375px) {
-  aside {
-    max-width: 375px; }
-  .grillanoticias {
-    max-width: 375px; }
   #mensaje {
     width: 355px; }
-  .grillacontacto {
-    max-width: 375px; }
   .menu_noticias {
-    display: none; } }
+    display: none; }
+  .formulario {
+    max-width: 425px; } }
 
 @media screen and (min-width: 425px) {
-  aside {
-    max-width: 425px; }
-  .grillanoticias {
-    max-width: 425px; }
-  .grillacontacto {
-    max-width: 425px; }
   /* Noticias */
   .cuerpo_noticias {
     margin: 2px;
@@ -914,33 +894,67 @@ hr {
     .cuerpo_noticias #detalle_liq {
       padding: 15px; }
   /* formulario */
-  #mensaje {
+  .formulario .formulario_contacto #formulario_cuerpo #mensaje {
     width: 400px; }
-  #titulo_contacto {
-    font-size: 18px;
-    font-weight: 300;
-    color: whITE;
-    margin: 0; }
-  #contactos {
-    padding: 15px; }
-    #contactos p {
-      font-size: 16px;
-      font-weight: 200;
-      color: white; }
+  .formulario #contactos {
+    max-width: 90%; }
   /* footer */
   footer {
     display: inline-block; }
-  #not_1 {
-    max-width: 425px; }
-    #not_1 .card2 .data_foto {
-      max-width: 425px;
-      max-height: 300px; }
-    #not_1 .card2 .data {
-      max-width: 425px; } }
+  #not_1 .card2 .data_foto {
+    max-height: 300px; }
+  .not_index .noticia_grid .secundario {
+    margin: 3px;
+    background-size: cover;
+    max-width: 1440px;
+    width: 400px;
+    height: 250px;
+    overflow: hidden; }
+    .not_index .noticia_grid .secundario .content_index {
+      position: relative;
+      top: 215px;
+      padding: 10px;
+      height: 97px;
+      background-color: white;
+      transition-property: initial;
+      transition-duration: 1s; }
+      .not_index .noticia_grid .secundario .content_index .title {
+        font-family: sans-serif;
+        font-weight: 400;
+        text-align: justify;
+        margin-top: 10px;
+        font-size: 15px; }
+      .not_index .noticia_grid .secundario .content_index .text {
+        font-size: 14px;
+        margin: 0px;
+        color: black; }
+  .not_index .noticia_grid .secundario2 {
+    margin: 3px;
+    background-size: cover;
+    max-width: 1440px;
+    width: 400px;
+    height: 250px;
+    overflow: hidden; }
+    .not_index .noticia_grid .secundario2 .content_index {
+      position: relative;
+      top: 193px;
+      padding: 10px;
+      height: 97px;
+      background-color: white;
+      transition-property: initial;
+      transition-duration: 1s; }
+      .not_index .noticia_grid .secundario2 .content_index .title {
+        font-family: sans-serif;
+        font-weight: 400;
+        text-align: justify;
+        margin-top: 10px;
+        font-size: 15px; }
+      .not_index .noticia_grid .secundario2 .content_index .text {
+        font-size: 14px;
+        margin: 0px;
+        color: black; } }
 
 @media screen and (min-width: 768px) {
-  .grillacontacto {
-    max-width: 768px; }
   /*Footer */
   footer {
     display: flex;
@@ -988,51 +1002,44 @@ hr {
     #menu input[type=checkbox] {
       display: none; }
   /* Formulario */
-  .formulario_contacto {
-    display: flex;
-    flex-direction: row;
-    gap: 2px;
-    justify-content: space-around; }
-    .formulario_contacto #mensaje {
-      width: 300px;
-      height: 200px;
-      margin: 10px; }
-    .formulario_contacto #titulo_contacto {
-      font-size: 18px;
-      font-weight: 300; }
-    .formulario_contacto #contactos h5 {
-      color: black; }
-    .formulario_contacto #contactos p {
-      color: black; }
+  .formulario {
+    max-width: 768px; }
+    .formulario .formulario_contacto {
+      flex-direction: row;
+      gap: 2px;
+      justify-content: space-around; }
   .show-menu {
     display: none; }
   /*Nosotros*/
-  main {
+  .nosotros {
     max-width: 95%; }
-    main .miviva {
+    .nosotros .miviva {
       margin-bottom: 25px; }
-      main .miviva section .mensaje h2 {
+      .nosotros .miviva section .mensaje h2 {
         font-size: 45px;
         font-weight: 500; }
-      main .miviva section .mensaje p {
+      .nosotros .miviva section .mensaje p {
         font-size: 20px;
         font-weight: 400; }
-    main .cv_nosotros {
+    .nosotros .cv_nosotros {
       flex-direction: row; }
-      main .cv_nosotros .ana, main .cv_nosotros .mario {
+      .nosotros .cv_nosotros .ana, .nosotros .cv_nosotros .mario {
         max-width: 45%; }
-        main .cv_nosotros .ana .cv, main .cv_nosotros .mario .cv {
+        .nosotros .cv_nosotros .ana .cv, .nosotros .cv_nosotros .mario .cv {
           align-items: center; }
-          main .cv_nosotros .ana .cv h3, main .cv_nosotros .mario .cv h3 {
+          .nosotros .cv_nosotros .ana .cv h3, .nosotros .cv_nosotros .mario .cv h3 {
             font-size: 20px;
             font-weight: 500; }
+  /*Novedades*/
   .grillanoticias {
-    grid-template-areas: "header header" "nav nav" "aside not_1" "aside not_1" "footer footer";
-    grid-template-columns: 30% auto;
-    max-width: 768px; }
+    display: grid;
+    grid-template-areas: "header header" "nav nav " "aside not_1" "aside not_1 " "footer footer ";
+    grid-template-columns: 30% auto; }
   aside {
+    grid-area: aside;
     max-width: 95%;
-    margin: 5px; }
+    margin: 5px;
+    display: block; }
     aside .menu_noticias {
       display: flex;
       flex-direction: column;
@@ -1041,16 +1048,22 @@ hr {
         left: 5%; }
       aside .menu_noticias #listado_noticias {
         flex-direction: column; }
-  #not_1 .card2 .data_foto {
-    display: flex;
-    justify-content: center;
-    padding: 0px; }
-    #not_1 .card2 .data_foto img {
-      object-fit: contain;
-      max-width: 100%;
-      max-height: 100%; }
-  .data {
-    max-width: 95%; }
+        aside .menu_noticias #listado_noticias li {
+          transition: 0.25s; }
+          aside .menu_noticias #listado_noticias li:hover {
+            background-color: dimgrey; }
+  .not_1 {
+    grid-area: not_1; }
+    .not_1 .card2 .data_foto {
+      max-height: none;
+      max-width: 500px; }
+    .not_1 .data {
+      max-width: 500px;
+      justify-content: center;
+      padding: 0; }
+      .not_1 .data content {
+        max-width: 90%; }
+  /* Detalle paguina INDEX */
   .grillasindex {
     display: grid;
     grid-template-areas: "header header  " "nav nav" "principal tabla " "servicio servicio" "noticias noticias" "footer footer";
@@ -1060,8 +1073,7 @@ hr {
     display: grid;
     grid-template-areas: "menu servicio";
     grid-template-columns: 20% auto;
-    height: 450px;
-    background-color: beige; }
+    height: 450px; }
     .contenedor_servicios .menu_servicios_index {
       grid-area: menu;
       padding: 2px;
@@ -1078,9 +1090,12 @@ hr {
       margin: 5px;
       padding: 2px; }
       .contenedor_servicios .menu_detalle_servicios_index .detalle_servicios_index {
-        max-width: 500px; }
-        .contenedor_servicios .menu_detalle_servicios_index .detalle_servicios_index li h3 {
-          justify-content: space-around; }
+        max-width: 550px;
+        min-height: 400px; }
+        .contenedor_servicios .menu_detalle_servicios_index .detalle_servicios_index li {
+          min-height: 400px; }
+          .contenedor_servicios .menu_detalle_servicios_index .detalle_servicios_index li h3 {
+            justify-content: space-around; }
   #hr_servicios {
     display: none; }
   .not_index {
@@ -1092,102 +1107,78 @@ hr {
     .not_index .noticia_grid {
       grid-area: noticias_1;
       display: flex;
-      flex-direction: row;
-      height: 170px; }
+      flex-direction: row; }
       .not_index .noticia_grid .secundario {
         margin: 3px;
         background-size: cover;
         max-width: 1440px;
-        width: 95%;
-        overflow: hidden;
-        background-image: url(../imagenes/elon.jpg); }
+        width: 370px;
+        height: 250px;
+        overflow: hidden; }
         .not_index .noticia_grid .secundario .content_index {
           position: relative;
-          top: 120px;
+          top: 180px;
           padding: 10px;
           height: 97px;
           background-color: white;
           transition-property: initial;
-          transition-duration: 1s; }
-          .not_index .noticia_grid .secundario .content_index .autor {
-            font-size: 8px;
-            padding: 3px;
-            margin: 8px;
-            justify-items: left; }
+          transition-duration: 1s;
+          background-size: contain; }
           .not_index .noticia_grid .secundario .content_index .title {
             font-family: sans-serif;
-            font-weight: 300;
+            font-weight: 400;
+            text-align: justify;
             margin-top: 10px;
-            font-size: 13px; }
+            font-size: 15px; }
           .not_index .noticia_grid .secundario .content_index .text {
-            font-size: 10px;
+            font-size: 14px;
             margin: 0px;
             color: black; }
-          .not_index .noticia_grid .secundario .content_index .button_index {
-            display: flex;
-            justify-content: right;
-            padding: 2px;
-            margin: 2px;
-            font-size: 10px;
-            text-decoration: underline;
-            list-style: none;
-            color: red; }
       .not_index .noticia_grid .secundario2 {
         margin: 3px;
         background-size: cover;
         max-width: 1440px;
-        width: 95%;
-        overflow: hidden;
-        background-image: url(../imagenes/Nuestros-servicios.jpg); }
+        width: 370px;
+        height: 250px;
+        overflow: hidden; }
         .not_index .noticia_grid .secundario2 .content_index {
           position: relative;
-          top: 120px;
+          top: 180px;
           padding: 10px;
           height: 97px;
           background-color: white;
           transition-property: initial;
-          transition-duration: 1s; }
-          .not_index .noticia_grid .secundario2 .content_index .autor {
-            font-size: 8px;
-            padding: 3px;
-            margin: 8px;
-            justify-items: left; }
+          transition-duration: 1s;
+          background-size: contain; }
           .not_index .noticia_grid .secundario2 .content_index .title {
             font-family: sans-serif;
-            font-weight: 300;
+            font-weight: 400;
+            text-align: justify;
             margin-top: 10px;
-            font-size: 13px; }
+            font-size: 15px; }
           .not_index .noticia_grid .secundario2 .content_index .text {
-            font-size: 10px;
+            font-size: 14px;
             margin: 0px;
             color: black; }
-          .not_index .noticia_grid .secundario2 .content_index .button_index {
-            display: flex;
-            justify-content: right;
-            padding: 2px;
-            margin: 2px;
-            font-size: 10px;
-            text-decoration: underline;
-            list-style: none;
-            color: red; }
   .texto_desz:hover .content_index {
-    transform: translateY(-37px); }
+    transform: translateY(-39px); }
     .texto_desz:hover .content_index .content_index {
-      transform: translateY(37px); }
+      transform: translateY(39px); }
   ::after.texto_desz:hover .content_index {
-    transform: translateY(37px); }
+    transform: translateY(39px); }
   .tablas {
     display: block;
     grid-area: tabla; }
     .tablas #tabla {
       table-layout: fixed;
       border-collapse: collapse;
-      background-color: white;
       display: block;
       width: 95%;
       margin-top: 40px;
       margin-right: 10px;
       margin-left: 5px; }
+      .tablas #tabla caption {
+        background-color: white; }
       .tablas #tabla thead th:nth-child(1) {
         width: 105px; }
       .tablas #tabla thead th:nth-child(2) {
@@ -1215,34 +1206,18 @@ hr {
       visibility: hidden; } }
 
 @media screen and (min-width: 1024px) {
-  .grillacontacto {
-    max-width: 1024px; }
   .grillanoticias {
-    max-width: 1024px; }
-  aside {
-    max-width: 95%;
-    margin: 5px; }
-    aside .menu_noticias {
-      display: flex;
-      flex-direction: column;
-      position: sticky; }
-      aside .menu_noticias #titulo_aside {
-        left: 5%; }
-      aside .menu_noticias #listado_noticias {
-        flex-direction: column; }
-  #not_1 {
-    max-width: 600px; }
-    #not_1 .card2 {
-      max-width: 600px; }
-      #not_1 .card2 .data_foto {
-        max-width: 600px;
-        max-height: fit-content; }
-        #not_1 .card2 .data_foto img {
-          object-fit: contain;
-          max-width: 100%;
-          max-height: 100%; }
-      #not_1 .card2 .data {
-        max-width: 600px; }
+    grid-template-columns: 30% auto; }
+  .not_1 .card2 {
+    display: flex;
+    flex-direction: row; }
+    .not_1 .card2 .data_foto {
+      max-width: 45%; }
+    .not_1 .card2 .data {
+      flex-direction: row;
+      padding: 3px; }
+      .not_1 .card2 .data content {
+        max-width: 45%; }
   footer {
     display: flex;
     flex-direction: row; }
@@ -1287,41 +1262,31 @@ hr {
     margin-left: 0;
     margin-bottom: 3px; }
   /* Formulario */
-  .formulario_contacto {
-    display: flex;
-    flex-direction: row;
-    gap: 2px;
-    justify-content: space-around; }
-    .formulario_contacto #mensaje {
-      width: 400px;
-      height: 400px;
-      margin: 10px; }
-    .formulario_contacto #titulo_contacto {
-      font-size: 18px;
-      font-weight: 300; }
-    .formulario_contacto #contactos h5 {
-      color: black; }
-    .formulario_contacto #contactos p {
-      color: black; }
-  main .miviva {
+  .formulario {
+    max-width: 1440px; }
+    .formulario .formulario_contacto {
+      flex-direction: row;
+      gap: 2px;
+      justify-content: space-around; }
+  .nosotros .miviva {
     margin-bottom: 25px;
     width: 95%; }
-    main .miviva section .mensaje h2 {
+    .nosotros .miviva section .mensaje h2 {
       font-size: 45px; }
-    main .miviva section .mensaje p {
+    .nosotros .miviva section .mensaje p {
       font-size: 25px;
       font-weight: 400; }
-  main .cv_nosotros {
+  .nosotros .cv_nosotros {
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 10px;
     margin-left: 5px; }
-    main .cv_nosotros .ana, main .cv_nosotros .mario {
+    .nosotros .cv_nosotros .ana, .nosotros .cv_nosotros .mario {
       max-width: 45%;
       margin-left: 4px; }
-      main .cv_nosotros .ana .cv, main .cv_nosotros .mario .cv {
+      .nosotros .cv_nosotros .ana .cv, .nosotros .cv_nosotros .mario .cv {
         align-items: center; }
-        main .cv_nosotros .ana .cv h3, main .cv_nosotros .mario .cv h3 {
+        .nosotros .cv_nosotros .ana .cv h3, .nosotros .cv_nosotros .mario .cv h3 {
           font-size: 25px; }
   /* Index */
   .grillasindex {
@@ -1342,128 +1307,74 @@ hr {
       grid-area: titulo; }
     .not_index .noticia_grid {
       grid-area: noticias;
-      display: flex;
-      flex-direction: row;
-      height: auto; }
+      height: auto;
+      justify-content: space-around; }
       .not_index .noticia_grid .secundario {
         margin: 3px;
         background-size: cover;
         max-width: 1440px;
-        width: 95%;
+        width: 370px;
         height: 250px;
-        overflow: hidden;
-        background-image: url(../imagenes/elon.jpg); }
+        overflow: hidden; }
         .not_index .noticia_grid .secundario .content_index {
           position: relative;
-          top: 190px;
+          top: 197px;
           padding: 10px;
           height: 97px;
           background-color: white;
           transition-property: initial;
-          transition-duration: 1s; }
-          .not_index .noticia_grid .secundario .content_index .autor {
-            font-size: 8px;
-            padding: 3px;
-            margin: 8px;
-            justify-items: left; }
+          transition-duration: 1s;
+          background-size: contain; }
           .not_index .noticia_grid .secundario .content_index .title {
             font-family: sans-serif;
-            font-weight: 300;
+            font-weight: 400;
+            text-align: justify;
             margin-top: 10px;
-            font-size: 13px; }
+            font-size: 15px; }
           .not_index .noticia_grid .secundario .content_index .text {
-            font-size: 10px;
+            font-size: 14px;
             margin: 0px;
             color: black; }
-          .not_index .noticia_grid .secundario .content_index .button_index {
-            display: flex;
-            justify-content: right;
-            padding: 2px;
-            margin: 2px;
-            font-size: 10px;
-            text-decoration: underline;
-            list-style: none;
-            color: red; }
       .not_index .noticia_grid .secundario2 {
         margin: 3px;
         background-size: cover;
         max-width: 1440px;
-        width: 95%;
+        width: 370px;
         height: 250px;
-        overflow: hidden;
-        background-image: url(../imagenes/Nuestros-servicios.jpg); }
+        overflow: hidden; }
         .not_index .noticia_grid .secundario2 .content_index {
           position: relative;
-          top: 190px;
+          top: 197px;
           padding: 10px;
           height: 97px;
           background-color: white;
           transition-property: initial;
-          transition-duration: 1s; }
-          .not_index .noticia_grid .secundario2 .content_index .autor {
-            font-size: 8px;
-            padding: 3px;
-            margin: 8px;
-            justify-items: left; }
+          transition-duration: 1s;
+          background-size: contain; }
           .not_index .noticia_grid .secundario2 .content_index .title {
             font-family: sans-serif;
-            font-weight: 300;
+            font-weight: 400;
+            text-align: justify;
             margin-top: 10px;
-            font-size: 13px; }
+            font-size: 15px; }
           .not_index .noticia_grid .secundario2 .content_index .text {
-            font-size: 10px;
+            font-size: 14px;
             margin: 0px;
             color: black; }
-          .not_index .noticia_grid .secundario2 .content_index .button_index {
-            display: flex;
-            justify-content: right;
-            padding: 2px;
-            margin: 2px;
-            font-size: 10px;
-            text-decoration: underline;
-            list-style: none;
-            color: red; }
   .tablas {
     grid-area: tabla; }
-    .tablas #tabla {
-      table-layout: fixed;
-      table-layout: fixed;
-      border-collapse: collapse;
-      background-color: white;
-      display: block;
-      width: 95%;
-      margin-top: 40px;
-      margin-right: 10px;
-      margin-left: 5px; }
-      .tablas #tabla thead th:nth-child(1) {
-        width: 105px; }
-      .tablas #tabla thead th:nth-child(2) {
-        width: 90px; }
-      .tablas #tabla thead th:nth-child(3) {
-        width: 90px; }
-      .tablas #tabla tbody tr:nth-child(odd) {
-        background-color: #b4cbe6; }
-      .tablas #tabla tbody tr:nth-child(even) {
-        background-color: beige; }
-      .tablas #tabla thead tr {
-        background-color: whitesmoke; }
-      .tablas #tabla #titulo_tabla {
-        display: flex;
-        justify-content: center; }
-      .tablas #tabla th {
-        padding: 3px; }
-      .tablas #tabla td {
-        padding: 3px; }
     .tablas #tabla_1 {
       visibility: visible;
       table-layout: fixed;
       border-collapse: collapse;
-      background-color: white;
       display: block;
       width: 95%;
       margin-top: 40px;
       margin-right: 10px;
-      margin-left: 5px; }
+      margin-left: 5px;
+      width: 90%; }
+      .tablas #tabla_1 caption {
+        background-color: white; }
       .tablas #tabla_1 thead th:nth-child(1) {
         width: 105px; }
       .tablas #tabla_1 thead th:nth-child(2) {
@@ -1487,12 +1398,13 @@ hr {
       visibility: visible;
       table-layout: fixed;
       border-collapse: collapse;
-      background-color: white;
       display: block;
       width: 95%;
       margin-top: 40px;
       margin-right: 10px;
       margin-left: 5px; }
+      .tablas #tabla_2 caption {
+        background-color: white; }
       .tablas #tabla_2 thead th:nth-child(1) {
         width: 105px; }
       .tablas #tabla_2 thead th:nth-child(2) {
@@ -1524,4 +1436,10 @@ hr {
         text-decoration: underline;
         font-family: 'Courier New', Courier, monospace; }
       .tablas .link_interes div {
-        margin: 2px; } }
+        margin: 2px; }
+  .texto_desz:hover .content_index {
+    transform: translateY(-49px); }
+    .texto_desz:hover .content_index .content_index {
+      transform: translateY(49px); }
+  ::after.texto_desz:hover .content_index {
+    transform: translateY(49px); } }

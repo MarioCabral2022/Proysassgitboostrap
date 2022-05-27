@@ -1,8 +1,11 @@
 header{
     grid-area: header;
     max-width: 1440px;
-    background-color:$background_footer;
+    background: $background_footer;
+    @include fondo_movil
+    
 }
+
 .encabezado{
    display: flex;
    flex-direction: column;

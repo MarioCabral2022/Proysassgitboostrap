@@ -1,15 +1,17 @@
 
 .index{
-   background-image: url(../imagenes/pexels-henry-&-co-1939485.jpg); 
+   background-color: rgba(192, 211, 229, 0.849);
 }
 
 
 .grillasindex {
     display: flex;
     flex-direction: column;
-    max-width: 1024px;
+    max-width: 1440px;
+    background-image: url(../imagenes/fondobody.jpg); 
 }
 
+/* Frases en Index con slide*/
 .principal{
     grid-area: principal;
     max-width: 1024px;
@@ -22,7 +24,7 @@
                 ul{
                     display: flex;
                     padding: 5px;
-                    width: 405%;
+                    width: 400%;
                     animation: slide 80s infinite alternate ease-in-out;
                     li{
                         list-style: none;
@@ -30,6 +32,7 @@
                         img{
                             object-fit: contain;
                             width: 100%;
+                            overflow: hidden;
                         }
                        
                     }      
@@ -37,6 +40,7 @@
             }              
 }
 
+/* Espaciados de tiempo para slide */
 
 @keyframes slide {
     0%  { margin-left: 0%;}
@@ -53,7 +57,8 @@
    
 }
 
-    
+    /*Seccion de servicios del estudio */
+
 .contenedor_servicios{
         display: flex;
         flex-direction: row;
@@ -63,7 +68,7 @@
                     display: flex;
                     justify-content: center;
                     font-family: $fuente_servicios_ul;
-                    font-size: 35px;
+                    font-size: 25px;
                     margin: 2px;
 
             }
@@ -75,84 +80,85 @@
                             padding: 15px;
                             margin: 5px;
                             list-style: none;
-                        
-                            li{
+                             li{
                                 position: relative;
                                 padding: 10px;
-
                                 #notarial_i{
-                                    @include servicios;
+                                    @include servicios (25px, 80px, 12px);
                                     background: -webkit-linear-gradient(blue, red);
                                     -webkit-text-fill-color: transparent;
                                     -webkit-background-clip: text;
                                 }
                                 #contable_i{
-                                    @include servicios;
-                                    background: -webkit-linear-gradient( black, blue);
+                                    @include servicios (25px, 80px, 12px);
+                                     background: -webkit-linear-gradient( black, blue);
                                     -webkit-text-fill-color: transparent;
                                     -webkit-background-clip: text;
                                     left: 60px;
                                 }
                                 #impuestos_i{
-                                    @include servicios;
+                                    @include servicios (25px, 80px, 12px);
                                     background: -webkit-linear-gradient( rgba(13, 95, 38, 0.616), blue);
                                     -webkit-text-fill-color: transparent;
                                     -webkit-background-clip: text;
 
                                 }
                                 #rrhh_i{
-                                    @include servicios;
+                                    @include servicios (25px, 80px, 12px);
                                     background: -webkit-linear-gradient( black, rgb(145, 143, 20));
                                     -webkit-text-fill-color: transparent;
                                     -webkit-background-clip: text;
 
                                 }
                                 #payroll_i{
-                                    @include servicios;
+                                    @include servicios (25px, 80px, 12px);
                                     background: -webkit-linear-gradient( black, rgb(27, 199, 99),rgb(201, 173, 18));
                                     -webkit-text-fill-color: transparent;
                                     -webkit-background-clip: text;
                                 }
                         }
             }
-        }    
-        .detalle_servicios_index{
-            list-style: none;
-            margin: 5px;
-            max-width: 95%;
-            height: 700px;
-            padding: 2px;            
-            width: 100%;
-                    li{
-                        position: absolute;
-                        opacity: 0 ;
-                        max-width: inherit;
-                        max-height: inherit;
-                        background-color: white;
-                        transition: opacity 0.5s ;
-                        &:first-child{
-                            opacity: 1;
-                            }
-                        &:target{
-                            opacity: 1;
-                            }
-                        h3{
-                                font-family: 'Indie Flower', cursive;
-                                font-size: 20px;
-                                display: flex;
-                                text-decoration: underline;
-                                justify-content: center;
-                                
-                                margin: 2px;
-                                margin-top: 4px;
-                        }
-                        p{
-                                margin: 5px;
-                                font-family: $fuente_servicios;
-                        }
-    
-                        }
         } 
+        .menu_detalle_servicios_index{
+            .detalle_servicios_index{
+                list-style: none;
+                margin: 5px;
+                max-width: 95%;
+                height: 700px;
+                padding: 2px;            
+                width: 100%;
+                        li{
+                            position: absolute;
+                            opacity: 0 ;
+                            max-width: inherit;
+                            max-height: inherit;
+                            background-color: white;
+                            transition: opacity 0.5s ;
+                            min-height: 600px;
+                            box-shadow: 0 0 0 0.3em rgb(80, 80, 122);
+                            &:first-child{
+                                opacity: 1;
+                                }
+                            &:target{
+                                opacity: 1;
+                                }
+                            h3{
+                                    font-family: 'Indie Flower', cursive;
+                                    font-size: 20px;
+                                    display: flex;
+                                    text-decoration: underline;
+                                    justify-content: center;
+                                    margin: 2px;
+                                    margin-top: 4px;
+                            }
+                            p{
+                                    margin: 5px;
+                                    font-family: $fuente_servicios;
+                            }
+        
+                        }
+            } 
+        }    
 }      
         
 
@@ -169,7 +175,7 @@
 #hr_servicios{
     @include hr
 }
-
+ /* Seccion Noticias de Interes */
 .not_index{
     display: flex;
     flex-direction: column;
@@ -197,18 +203,47 @@
         }
         .noticia_grid{
             .secundario{
-                        @include noticia_index;
-                        background-image: url(../imagenes/elon.jpg);
-                        
+                        @include noticia_index(170px,300px) ;
+                        background-image: url(../imagenes/uber.jpg);
+                        .content_index{
+                                 @include content_index (112px, 97px);  
+                                      
+                            .title {
+                                @include titulo(10px,300)
+                            }
+                            .text {
+                                     @include texto_noticia(13px)
+                            }
+            
+                            .button_index{
+                                 @include boton_leer_mas
+                            }
                         }
+                        
+            }
             .secundario2{
-                        @include noticia_index;
+                        @include noticia_index(170px,300px);
                         background-image: url(../imagenes/Nuestros-servicios.jpg);
+                        .content_index{
+                                @include content_index (118px, 97px);  
+                           
+                            .title {
+                                @include titulo(10px,300)
+                            }
+                            .text {
+                                     @include texto_noticia(13px)
+                            }
+            
+                            .button_index{
+                                 @include boton_leer_mas
+                            }
+                        } 
+            }
+        } 
+    }              
 
-            } 
-        }              
-}
-
+    /* Efecto Hoover para las noticias */
+    
 .texto_desz:hover .content_index{
     transform: translateY(-40px);
         .content_index{
@@ -220,7 +255,9 @@
 ::after.texto_desz:hover .content_index {
     transform: translateY(40px)
 }
-            
+     
+/* Tablas se anula para versiones en celulares */
+
 .tabla_cotizacion{
     #tabla{
         display: none;

@@ -1,86 +1,83 @@
 .grillanosotros {
-    background-image: url(../imagenes/pexels-karolina-grabowska-4709425.jpg);
-    display: grid;
+    background-image: url(../imagenes/fondonosotros.jpg);
     grid-template-areas: 
         "header"
         "nav"
         "main"
         "footer";
-    max-width: 1024px;
+    max-width: 1440px;
     margin: 0px;
     gap: 1px;
 }
 
 
-main{
+.nosotros{
     grid-area: main;
    
-.miviva{
-    margin-bottom: 15px;
-    section{
-          .mensaje{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 3px;
-            margin: 5px;
-                h2{
-                    font-size: 25px;
-                    font-weight: bold;
-                    font-family: $fuente_titulos;
-                    text-decoration: underline;
-                }
-                p{
-                    font-size: 15px;
-                    font-weight: 200;
-                    font-style: italic;
-                    font-family: $fuente_texto_servicios;
-                    text-align: justify;
-                }
-
-          }
-      }
-
-    }
-    .cv_nosotros{
-    
-        display: flex;
-        flex-direction: column;
-
-        .ana{
-            display: flex;
-            flex-direction: row;
-            max-width: 95%;
-            margin-top: 10px;
-                img{
-                    width: 50%;
-                    margin-right: 3px;
-                }
-                .cv{
-                    width: 50%;
-                    h3{
-                        position: relative;
-                        left: 6%;
-                        text-decoration: underline;
-                        font-size: 16px;
-                        font-family: $fuente_servicios;
+    .miviva{
+        margin-bottom: 15px;
+        section{
+            .mensaje{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 3px;
+                margin: 5px;
+                    h2{
+                        font-size: 25px;
                         font-weight: bold;
+                        font-family: $fuente_titulos;
+                        text-decoration: underline;
                     }
                     p{
-                        font-weight: 400;
-                        font-size: 10px;
+                        font-size: 15px;
+                        font-weight: 200;
+                        font-style: italic;
                         font-family: $fuente_texto_servicios;
                         text-align: justify;
                     }
-                }
+
+            }
         }
 
-        .mario{
-            @extend .ana
         }
+        .cv_nosotros{
+            display: flex;
+            flex-direction: column;
+            .ana{
+                display: flex;
+                flex-direction: row;
+                max-width: 95%;
+                margin-top: 10px;
+                    img{
+                        width: 50%;
+                        margin-right: 3px;
+                    }
+                    .cv{
+                        width: 50%;
+                        h3{
+                            position: relative;
+                            left: 6%;
+                            text-decoration: underline;
+                            font-size: 16px;
+                            font-family: $fuente_servicios;
+                            font-weight: bold;
+                        }
+                        p{
+                            font-weight: 400;
+                            font-size: 10px;
+                            font-family: $fuente_texto_servicios;
+                            text-align: justify;
+                        }
+                    }
+            }
 
-                    
-    }
+            .mario{
+                @extend .ana
+            }
+
+                        
+        }
 }
 
 hr{

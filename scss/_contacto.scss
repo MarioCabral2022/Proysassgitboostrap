@@ -5,103 +5,122 @@
         "nav"
         "form"
         "footer";
-    background-color:antiquewhite;
-    max-width: 320px;
+    max-width: 1440px;
     margin: 0px;
     gap: 1px;
 }
 
 .formulario{
     grid-area: form;
-    background-image: url(../imagenes/894.jpg);
+    background-image: url(../imagenes/fondocontacto.webp);
     background-size: cover;
     width: 100%;
-        
-}
+    max-width: 320px;
+        .formulario_contacto{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                #formulario_cuerpo{
+                    background-color: transparent;
+                    padding: 5px;
+                    margin-bottom: 10px;
+                    margin-top: 20px;
+                    box-sizing: border-box;
+                        #nombre{
+                            border: 0;
+                            outline: none;
+                            background-color: transparent;
+                        }
+                        #mail{
+                            @extend #nombre
+                        }
+                        #celular{
+                            @extend #nombre
+                        }
+                        #mensaje{
+                            width: 300px;
+                            height: 300px;
+                        }
+                        .datos{
+                                border-bottom: 2px solid rgb(128, 8, 8);
+                                margin: 0;
+                                padding: 0;
+                                }
+                    .titulo_formulario{
+                                        text-align: center;
+                                        font-size: 20px;
+                                        color: black;
+                                        text-decoration: underline;
+                                            
+                                            
+                    }
+                    #enviar{
+                        justify-content: center;
+                            .btn{
+                                border-radius: 8px;
+                                padding: 10px 5px;
+                                margin: 5px;
+                                width: 95%;
+                                align-items: center;
+                                background-color: none;
+                                --color: rgb(194, 19, 19);
+                                --hover: #110f8f;
+                                color: var(--color);
+                                -webkit-transition: 0.25s;
+                                transition: 0.25s;
+                                &:hover,
+                                &:focus{
+                                    box-shadow: inset 0 0 0 2em var(--hover);
+                                    border-color: var(--hover);
+                                    color: rgb(35, 110, 223);
+                                }
+                            }
 
-
-.formulario_contacto{
-    display: flex;
-    flex-direction: column;
-        #formulario_cuerpo{
-            background-color: transparent;
-            padding: 5px;
-            margin-bottom: 50px;
-            margin-top: 20px;
-            box-sizing: border-box;
-                .titulo_formulario{
-                                text-align: center;
-                                font-size: 20px;
-                                color: black;
+                    }    
                 }
-        }
+        
+            #contactos{
+                             
+                padding: 10px;
+                margin: 8px;
+                max-width: 85%;
+                background-color: white;
+                box-shadow: 0 0 0 0.5em black;
+                    #titulo_contacto{
+                        margin: 8px;
+                        font-size: 25px;
+                        font-weight: 400;
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-style: oblique;
+                    }
+                    p {
+                        font-size: 20px;
+                        font-weight: 300;
+                        color: black;
+                    }
+                    .redes_sociales_contactos {
+                        flex-direction: row;
+                        align-items: center;
+                        a{
+                            padding: 5px;
+                            color: black;
+                            i{
+                                width: 35px;
+                                height: 35px;
+                            }
+                
+                        }
+                
+                }
+            }
     }
 
-.datos{
-   border-bottom: 2px solid rgb(128, 8, 8);
-   margin: 0;
-   padding: 0;
-}
-
-
-#nombre, #mail, #celular{
-    border: none;
-   
-}
-
-#enviar{
-    justify-content: center;
-    .btn{
-        border-radius: 8px;
-        padding: 10px 5px;
-        margin: 5px;
-        width: 95%;
-        align-items: center;
-        background-color: none;
-         --color: rgb(194, 19, 19);
-         --hover: #110f8f;
-        color: var(--color);
-        -webkit-transition: 0.25s;
-        transition: 0.25s;
-        &:hover,
-        &:focus{
-            box-shadow: inset 0 0 0 2em var(--hover);
-            border-color: var(--hover);
-            color: rgb(35, 110, 223);
-        }
-    }
-
 }
 
 
 
-#contactos{
-    padding: 30px;
-    margin-right: 15%;
-    margin-bottom: 50px;
-    margin-top: 20px;
-    margin-left: 10%;
-    box-sizing: border-box;
-        p {
-            font-size: 20px;
-            font-weight: 300;
-            color: black;
-          }
 
-}
 
-#mensaje{
-    width: 300px;
-    height: 300px;
-    margin: 1px;
-}
 
-#titulo_contacto{
-    font-size: 25px;
-    font-weight: 400;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: oblique;
-       
-}
 
 

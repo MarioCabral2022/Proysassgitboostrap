@@ -1,39 +1,32 @@
 
 .grillanoticias {
-    display: grid;
-    grid-template-areas: 
-        "header  "
-        "nav "
-        "aside "
-        "not_1"
-        "footer ";
-    
-    max-width: 320px;
+    display: flex;
+    flex-direction: column;   
+    max-width: 1440px;
     justify-content: center;
     margin: 0px;
     background-image: url(../imagenes/dirty-pattern-paint-room-blockv2.jpg)
 }
 
 aside{
-    grid-area: aside;
-    max-width: 320px;
     
+    display: none;
 }
 
+/* Menu de Noticias */
 
 .menu_noticias{
-    background-color: rgba(5, 3, 29, 0.24);
+    background-color: rgba(152, 151, 167, 0.24);
     max-width: 100%;
     top: 90px;
     border: 10px;
     #titulo_aside{
-        font-size: 24px;
+        font-size: 20px;
         text-decoration: underline;
-        color: white;
+        color: black;
         position: relative;
         left: 20%;
-        }
-
+    }
     #listado_noticias{
             display: flex;
             flex-direction: row;
@@ -56,64 +49,51 @@ aside{
 
 /* Seccion de Noticias */
 
-#not_1{
-        grid-area: not_1;
+.not_1{
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         align-items: center;
-        max-width: 320px;
     .card2{
-    
-    margin: 3px;
-    padding: 3px;
-    .data_foto{
-                display: flex;
-                justify-content: center;
-                padding: 0px;
-                max-width: 320px;
-                max-height: 180px;
-                
-               img{
-                    object-fit: contain;
-                    max-width: 100%;
-                    max-height: 100%;
-               }
-
+        margin: 3px;
+        padding: 3px;
+            .data_foto{
+                        display: flex;
+                        justify-content: center;
+                        padding: 0px;
+                        margin: 3px;
+                        max-height: 180px;
+                    img{
+                        max-width: 100%;                   
+                    }
             }
-                
-                
+                     
     }
     .data {
           display: flex;
           flex-direction: column;
           padding: 10px;
           background-color: white; 
-          max-width: 320px;
-         
             .content{
                   
                     color: black;
                    
-                    .author {
-                            @include autor
-                        
-                        }
+                    .autor {
+                        @include autor(10px)
+                    }
 
                     .title {
-                            @include titulo
-    
+                        @include titulo(18px,300)
                     }
                     .text  {
-                        @include texto_noticia
-                        }
+                        @include texto_noticia(14px)
+                    }
 
                     .button{
-                    @include boton_leer_mas
+                        @include boton_leer_mas
                     }
             }
 
-        }
+    }
 
 }
    
