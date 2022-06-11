@@ -12,8 +12,20 @@
         max-width: 425px;
     }
     .grillasindex {
-        grid-template-rows: 270px 50px 250px 750px auto auto;
+        grid-template-rows: 270px 50px 250px 800px auto auto;
     } 
+    .contenedor_servicios{
+ 
+        .menu_detalle_servicios_index{
+           .detalle_servicios_index{ 
+                    li{
+                        width: 95%;
+                        height: 55%;
+                    }
+                                               
+               }     
+       } 
+   }       
 }
 
 
@@ -36,14 +48,31 @@
         #detalle_liq{
             padding: 15px;
             }
-
-        .grillasindex {
-                grid-template-rows: 270px 50px 250px 700px auto auto;
         }
 
-    }
+        .grillasindex {
+                grid-template-rows: 300px 50px 300px 780px auto auto;
+        }
 
-    
+        .principal{
+            .frases {
+                      
+                        ul{
+                           
+                            li{
+                                
+                                img{
+                                   
+                                    width: 100%;
+                                    height: 90%;
+                                }
+                               
+                            }      
+                        }
+                    }              
+        }
+
+       
     /* formulario */
         .formulario{
             .formulario_contacto{
@@ -105,7 +134,7 @@
         }
     }
 
-} 
+}
     
     
 @media screen and (min-width: 768px) {
@@ -294,23 +323,12 @@
 
     .not_1{
         grid-area: not_1;
-        .card2{
-            .data_foto{
-                 
-                 img{
-                    
-                   
-                }
-            }
-        }
+    
         .data{
             
             justify-content: center;
             
-            content{
-               
             }
-        }
     }
    
     /* Detalle paguina INDEX */
@@ -325,7 +343,7 @@
          "noticias noticias"
          "footer footer";
          grid-template-columns: 60% 40%;
-         grid-template-rows: 270px 50px 250px 450px auto auto;
+         grid-template-rows: 270px 50px 250px 400px auto auto;
     }
     .contenedor_servicios{
                 grid-area: servicios;
@@ -359,7 +377,7 @@
                          
                         li{
                             width: 70%;
-                            height: 65%;
+                            height: 45%;
                             h3{
                                justify-content: space-around;
                                                              
@@ -645,7 +663,7 @@
              "noticias tabla"
              "footer footer";
             grid-template-columns: 70% 30%; 
-            grid-template-rows: 270px 50px 380px 350px auto auto;
+            grid-template-rows: 270px 50px 400px 550px auto auto;
         }
         .principal{
             max-width: 760px;
@@ -665,8 +683,8 @@
                 .menu_detalle_servicios_index{
                     .detalle_servicios_index{ 
                              li{
-                                 width: 50%;
-                                 height: 77%;
+                                 width: 45%;
+                                 height: 45%;
                              }
                                                         
                         }     
@@ -769,7 +787,44 @@
       
 }
 
-         
+@media screen and (min-width: 1440px){
+
+    .grillasindex{
+                   
+       
+        grid-template-rows: 270px 50px 400px 350px auto auto;
+    }
+    .principal{
+        max-width: 760px;
+        padding: 6px;
+        margin: 6px;
+    }
+
+    .contenedor_servicios{
+
+             .menu_servicios_index{
+                                 
+                     h4{
+                        font-size: 20px;
+                       }
+            }
+ 
+            .menu_detalle_servicios_index{
+                .detalle_servicios_index{ 
+                         li{
+                             width: 40%;
+                             height: 50%;
+                         }
+                                                    
+                    }     
+            } 
+        }       
+
+
+
+
+}
+        
          
          
         
