@@ -1,12 +1,14 @@
 
-.index{
-   background-color: rgba(192, 211, 229, 0.849);
-}
-
-
 .grillasindex {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "principal"
+    "servicios"
+    "noticias_int"
+    "footer";
+    grid-template-rows: 270px 50px 250px 800px auto auto;
     max-width: 1440px;
     background-image: url(../imagenes/fondobody.jpg); 
 }
@@ -60,15 +62,16 @@
     /*Seccion de servicios del estudio */
 
 .contenedor_servicios{
-        display: flex;
+        grid-area: servicios;
         flex-direction: row;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
+        max-width: 100%;
         .menu_servicios_index{
             h4{
                     display: flex;
                     justify-content: center;
                     font-family: $fuente_servicios_ul;
-                    font-size: 25px;
+                    font-size: 20px;
                     margin: 2px;
 
             }
@@ -120,21 +123,23 @@
             }
         } 
         .menu_detalle_servicios_index{
+            
             .detalle_servicios_index{
                 list-style: none;
                 margin: 5px;
-                max-width: 95%;
-                height: 700px;
-                padding: 2px;            
-                width: 100%;
+               
+                
+                padding: 0;      
+                
                         li{
                             position: absolute;
                             opacity: 0 ;
-                            max-width: inherit;
-                            max-height: inherit;
+                            max-height: fit-content;
+                           
                             background-color: white;
                             transition: opacity 0.5s ;
-                            min-height: 600px;
+                            width: 95%;
+                            height: 80%;
                             box-shadow: 0 0 0 0.3em rgb(80, 80, 122);
                             &:first-child{
                                 opacity: 1;
@@ -177,6 +182,7 @@
 }
  /* Seccion Noticias de Interes */
 .not_index{
+    grid-area: noticias_int;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -203,7 +209,7 @@
         }
         .noticia_grid{
             .secundario{
-                        @include noticia_index(170px,300px) ;
+                        @include noticia_index (170px, 300px) ;
                         background-image: url(../imagenes/uber.jpg);
                         .content_index{
                                  @include content_index (112px, 97px);  

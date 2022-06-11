@@ -83,6 +83,8 @@ $fuente_texto_servicios:DM Sans, sans-serif;
     text-decoration:underline ;
     list-style: none;
     color: red;
+    position: relative;
+    bottom: 0%;
 }
 
 @mixin servicios ($fontsize,$width,$altura) {
